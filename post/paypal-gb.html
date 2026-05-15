@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>英国 PayPal 注册全攻略（Giffgaff 用户必看） | GiffGaff中文手册</title>
+    <meta name="description" content="详细教你如何在国内使用 Giffgaff 手机卡注册英国 PayPal 账户。包含中英账户区别、资料准备、绑定国内 Visa 信用卡及小额验证流程。">
+    <meta name="keywords" content="英国PayPal注册,PayPal UK,Giffgaff注册PayPal,国际版PayPal,跨境支付">
+    <meta name="author" content="GiffGaff中文使用手册">
+    
+    <link rel="icon" type="image/x-icon" href="https://www.giffgaff.com/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.giffgaff.com/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="https://www.giffgaff.com/static-resource-service/static/giffgaff/icons/favicon-32x32.png">
+
+    <style>
+        /* 全局 CSS 重置 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root { 
+            --primary-color: #f57300; 
+            --text-color: #333333; 
+            --text-muted: #666666;
+            --bg-color: #f4f5f7; 
+            --card-bg: #ffffff;
+            --border-color: #eaeaea;
+            --code-bg: #f8f9fa;
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7; 
+            color: var(--text-color); 
+            background-color: var(--bg-color); 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .content-card { 
+            background: var(--card-bg); 
+            padding: 32px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+        }
+
+        /* 新增：头部导航栏样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            text-decoration: none;
+            color: var(--text-color);
+        }
+
+        .header-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+
+        .header-left:hover .header-logo { transform: rotate(360deg); }
+
+        .site-title { font-size: 1.25rem; font-weight: 700; }
+
+        .header-right { display: flex; gap: 4px; }
+
+        .icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .icon-btn:hover { background: rgba(0,0,0,0.05); color: var(--primary-color); }
+        .icon-btn svg { fill: currentColor; width: 16px; height: 16px; }
+
+        /* 新增：公告栏样式 */
+        .announcement {
+            background: var(--card-bg);
+            border-left: 4px solid var(--primary-color);
+            padding: 10px 14px;
+            border-radius: 4px;
+            margin-bottom: 24px;
+            color: var(--text-color);
+            font-size: 0.9rem;
+            box-shadow: 0 1px 4px rgba(0,0,0,0.04);
+            border: 1px solid var(--border-color);
+        }
+
+        .announcement p { margin-bottom: 4px; }
+        .announcement p:last-child { margin-bottom: 0; }
+        .announcement a { color: var(--primary-color); text-decoration: none; }
+
+        /* 文章标题与排版样式 */
+        .post-title { 
+            color: var(--text-color); 
+            margin: 0 0 20px 0; 
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        h2 { 
+            color: var(--primary-color); 
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-bottom: 2px solid #fff4e6;
+            padding-bottom: 8px;
+        }
+        
+        h3 { 
+            color: var(--text-color); 
+            font-size: 1.15rem;
+            margin: 24px 0 12px;
+            font-weight: 600;
+        }
+        
+        p { margin-bottom: 16px; }
+        
+        ul, ol { padding-left: 24px; margin-bottom: 16px; }
+        li { margin-bottom: 8px; }
+
+        a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+        a:hover { text-decoration: underline; }
+
+        .important-note { 
+            background: #fff4e6; 
+            border-left: 4px solid #ff922b; 
+            padding: 16px; 
+            margin: 24px 0; 
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+        }
+        
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 6px; 
+            display: block; 
+            margin: 16px auto 16px auto; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        .img-caption {
+            display: block;
+            text-align: center;
+            color: var(--text-muted);
+            font-size: 0.85rem;
+            margin-top: -8px;
+            margin-bottom: 24px;
+            font-style: italic;
+        }
+
+        .btn-comment {
+            display: block;
+            width: 100%;
+            padding: 14px;
+            background-color: var(--primary-color);
+            color: white;
+            text-align: center;
+            border: none;
+            border-radius: 6px;
+            font-size: 1rem;
+            font-weight: bold;
+            cursor: pointer;
+            margin-top: 40px;
+            transition: opacity 0.2s;
+        }
+
+        .btn-comment:hover { opacity: 0.9; }
+        
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 0.875rem;
+            color: #888;
+        }
+
+        @media screen and (max-width: 600px) {
+            body { padding: 12px; }
+            .content-card { padding: 20px; }
+            .post-title { font-size: 1.4rem; }
+            .site-title { font-size: 1.1rem; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="content-card">
+    <header>
+        <a href="https://giffgaff.us" class="header-left">
+            <img src="https://www.giffgaff.com/apple-touch-icon.png" alt="Logo" class="header-logo">
+            <span class="site-title">GiffGaff中文手册</span>
+        </a>
+        <div class="header-right">
+            <a href="https://giffgaff.us/tag.html" class="icon-btn" title="搜索">
+                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+            </a>
+            <a href="https://giffgaff.us/rss.xml" target="_blank" class="icon-btn" title="RSS">
+                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"></path></svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="announcement">
+        <p>Telegram 咨询：<a href="https://t.me/giffgaffus" target="_blank" rel="nofollow">@giffgaffus</a></p>
+        <p>实体卡订购：<a href="https://shop.giffgaff.us" target="_blank" rel="nofollow">https://shop.giffgaff.us</a></p>
+    </div>
+
+    <article>
+        <h1 class="post-title">英国 PayPal 注册教程（Giffgaff 用户适用）</h1>
+
+        <div class="important-note">
+            <strong>专属奖励：</strong>加入 PayPal 并在注册后 25天内消费 5 英镑，你可以获得 10 英镑的新人奖励。活动2026年6月30日结束。<br>
+            <a href="https://py.pl/1PTtbU" target="_blank" rel="nofollow">👉 [点击此处通过奖励注册连接]</a>
+        </div>
+
+        <p>PayPal 是类似国内支付宝的一种平台，提供了网上的支付、收款、转账等功能。对于跨境商家来说，PayPal 是一个必不可少的支付工具。本文将教你如何注册英国 PayPal 账户，流程同样适用于美国、香港区。</p>
+
+        <h2>PayPal 中国和英国账户的区别</h2>
+        <p>通常来说，国际 PayPal 账户支持跨境交易，而中国 PayPal 账户限制比较多。大概有以下几点区别：</p>
+        <ul>
+            <li><strong>互转限制：</strong>国区 PayPal 只能转账给非国区账户，国区之间不可以互转；国际版无此限制。</li>
+            <li><strong>提现手续费：</strong>国区提现到银行卡每笔需 35 美元；美/英区提现到本地银行账户通常免费。</li>
+            <li><strong>商户兼容：</strong>很多国际商户（尤其是美国商户）仅支持国际版 PayPal，不支持国区账户。</li>
+            <li><strong>绑定卡种：</strong>国区支持国内借记卡；国际版通常需要全币种 Visa/Master 信用卡。</li>
+        </ul>
+
+        <h2>注册资料准备</h2>
+        <ol>
+            <li><strong>英国手机号：</strong>推荐使用 Giffgaff（返回首页有激活教程）。</li>
+            <li><strong>英国网络环境：</strong>建议使用对应地区的稳定 IP，避免频繁变动触发风控。</li>
+            <li><strong>全币种信用卡：</strong>国内银行发行的 Visa 或 MasterCard（单标或双标均可）。</li>
+            <li><strong>英国地址：</strong>可以从地图上找一个真实的英国地址和邮编。</li>
+        </ol>
+
+        <h2>详细注册流程</h2>
+        
+        <h3>1. 访问官网与地区选择</h3>
+        <p>打开 <a href="https://py.pl/1PTtbU" target="_blank">PayPal 官网</a>，点击注册并确保地区选择 <strong>United Kingdom</strong>。</p>
+        <img src="https://statics.mysim.top/paypal_uk/1.png" alt="选择地区">
+        <span class="img-caption">务必确认右上角或左下角地区为英国</span>
+
+        <h3>2. 验证 Giffgaff 手机号</h3>
+        <p>输入你的 Giffgaff 卡号。填入后会收到验证码，填入后继续设置登录密码。</p>
+        <img src="https://statics.mysim.top/paypal_uk/2.png" alt="手机验证">
+        <span class="img-caption">接收并填写手机验证码</span>
+
+        <h3>3. 填写个人信息与地址</h3>
+        <p>如实填写姓名，地址栏建议填写之前准备好的英国真实邮编及对应街道。</p>
+        <img src="https://statics.mysim.top/paypal_uk/3.png" alt="填写个人资料">
+        <img src="https://statics.mysim.top/paypal_uk/5.png" alt="填写地址">
+        <span class="img-caption">地址信息可在线随机找一个英国地址</span>
+
+        <h3>4. 设置账户目的</h3>
+        <p>根据你的实际用途选择，个人用户通常选择“Shop with PayPal（购物）”。</p>
+        <img src="https://statics.mysim.top/paypal_uk/6.png" alt="选择账户目的">
+
+        <h3>5. 绑定全币种 Visa 卡</h3>
+        <p>绑定你的国内信用卡。PayPal 会尝试一笔 1.95 美元的小额支付用于卡片验证。</p>
+        <img src="https://statics.mysim.top/paypal_uk/7.png" alt="确认Visa卡">
+        <img src="https://statics.mysim.top/paypal_uk/8.png" alt="小额验证支付">
+        <span class="img-caption">这笔扣款通常会在几个工作日内自动退回</span>
+
+        <h3>6. 获取并输入 4 位验证码</h3>
+        <p>查看你的银行 App 或短信通知，找到 <code>PP*</code> 开头的扣款记录，复制其中的 4 位数字 Code 并在 PayPal 网页确认。</p>
+
+        <h3>7. 注册完成</h3>
+        <p>看到此界面表示账户已激活，你可以开始享受国际版 PayPal 的便利了！</p>
+        <img src="https://statics.mysim.top/paypal_uk/10.png" alt="注册成功">
+        <span class="img-caption">英国 PayPal 注册成功界面</span>
+
+        <h2>常见问题 (FAQ)</h2>
+        <h3>1. 我必须拥有英国银行账户吗？</h3>
+        <p>不是必须的，你可以使用国内的 Visa/Master 国际信用卡进行注册和支付，但不能绑定国内普通的银联借记卡。</p>
+        
+        <h3>2. 可以同时拥有个人账户和商业账户吗？</h3>
+        <p>可以。但商业账户需要提供公司信息等更多审核资料，且必须使用不同的邮箱注册。</p>
+
+        <h3>3. 账户受到风控限制了怎么办？</h3>
+        <p>登录 PayPal 后按指引提供资料（如护照、地址证明）。建议初期保持 IP 稳定，从小额交易开始“养号”。</p>
+    </article>
+
+     
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> <a href="https://giffgaff.us">GiffGaff中文使用手册</a></p>
+</footer>
+
+<script>
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>注册接码常见问题 | GiffGaff中文手册</title>
+    <meta name="description" content="解答使用 Giffgaff 英国手机卡注册各大海外 App（如 Telegram、TikTok、Line 等）时遇到的收不到验证码、风控报错等常见问题，并附带支持与不支持的 App 列表。">
+    <meta name="keywords" content="giffgaff接码,giffgaff收不到短信,Telegram收不到验证码,TikTok注册,英国手机卡接码">
+    <meta name="author" content="GiffGaff中文使用手册">
+    <link rel="canonical" href="https://giffgaff.us/post/4.html">
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+
+    <meta property="og:title" content="Giffgaff 注册接码常见问题排查">
+    <meta property="og:description" content="全网最全 Giffgaff 接码避坑指南：TG、Line、TikTok 注册无响应怎么破？来看看这份清单。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://giffgaff.us/post/4.html">
+    <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+
+    <style>
+        /* 全局 CSS 重置 - 抹平浏览器差异 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root { 
+            --primary-color: #f57300; 
+            --text-color: #333333; 
+            --text-muted: #666666;
+            --bg-color: #f4f5f7; 
+            --border-color: #eaeaea;
+        }
+        
+        body { 
+            /* 万能系统字体栈 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7; 
+            color: var(--text-color); 
+            background-color: var(--bg-color); 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .content-card { 
+            background: #ffffff; 
+            padding: 32px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+        }
+
+        /* 顶部导航与图标样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .post-title { 
+            color: var(--text-color); 
+            margin: 0; 
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            color: #666;
+            text-decoration: none;
+            background-color: transparent;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .btn-home:hover, .btn-home:focus {
+            background-color: #f0f0f0;
+            color: var(--primary-color);
+            outline: none;
+        }
+
+        .btn-home svg { fill: currentColor; width: 22px; height: 22px; }
+
+        /* 内容排版 */
+        h2 { 
+            color: var(--primary-color); 
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-bottom: 2px solid #fff4e6;
+            padding-bottom: 8px;
+        }
+        
+        p { margin-bottom: 16px; }
+
+        a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+        a:hover { text-decoration: underline; }
+
+        /* FAQ 问答区块美化 */
+        .faq-item {
+            background-color: #f9f9f9;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 16px;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.1rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .faq-q::before {
+            content: "Q：";
+            font-weight: bold;
+            margin-right: 6px;
+        }
+
+        .faq-a {
+            color: var(--text-color);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .faq-a::before {
+            content: "A：";
+            font-weight: bold;
+            color: var(--text-muted);
+            margin-right: 6px;
+        }
+
+        /* 支持与不支持列表区块美化 */
+        .app-list-container {
+            margin-top: 32px;
+        }
+
+        .list-box {
+            border-radius: 8px;
+            padding: 20px;
+            margin-bottom: 24px;
+        }
+
+        .list-box-success {
+            background-color: #f6fcf6;
+            border: 1px solid #d3ebd3;
+        }
+        
+        .list-box-success h3 { color: #2da44e; margin-top: 0; margin-bottom: 16px; }
+        
+        .list-box-danger {
+            background-color: #fff8f8;
+            border: 1px solid #f8dada;
+        }
+        
+        .list-box-danger h3 { color: #cf222e; margin-top: 0; margin-bottom: 16px; }
+
+        .list-box ul {
+            padding-left: 20px;
+            margin: 0;
+            list-style-type: none;
+        }
+
+        .list-box ul li {
+            margin-bottom: 10px;
+            position: relative;
+        }
+
+        .list-box-success ul li::before {
+            content: "✅";
+            position: absolute;
+            left: -24px;
+            font-size: 0.9rem;
+        }
+
+        .list-box-danger ul li::before {
+            content: "❌";
+            position: absolute;
+            left: -24px;
+            font-size: 0.9rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 0.875rem;
+            color: #888;
+        }
+
+        @media screen and (max-width: 600px) {
+            body { padding: 12px; }
+            .content-card { padding: 20px; }
+            .post-title { font-size: 1.4rem; }
+            .list-box { padding: 16px; padding-left: 36px; }
+            .list-box ul li::before { left: -22px; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="content-card">
+    <header>
+        <h1 class="post-title">注册接码常见问题排查</h1>
+        <a href="https://giffgaff.us" class="btn-home" title="返回首页" aria-label="返回首页">
+            <svg viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
+            </svg>
+        </a>
+    </header>
+
+    <article>
+        <h2>疑难解答 (FAQ)</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">App 提示手机号码不正确？</div>
+            <div class="faq-a">用 giffgaff 手机号码注册各类 APP 时候，国际区号必须选择 UK（英国）或 +44。此时需要去掉国内区号 0，直接输入 10 位号码 7xxxxxxxxx 即可。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">注册海外业务或 APP 会有风控吗？</div>
+            <div class="faq-a">此卡为英国本地纯正实体号码。无论是在英亚开店、银行卡绑定，还是 TikTok、WhatsApp、Telegram、Twitter、Facebook、ChatGPT 等均可注册。目前为止，它是成本最低且几乎完美的接码手机卡。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">为什么收不到 Telegram 电报的验证码？</div>
+            <div class="faq-a">
+                <div>请务必使用 Telegram 移动端申请注册，网页端及电脑客户端目前是不支持新号注册收码的。<br>如果移动端还不行，大概率是因为你使用的是国内阉割版的安卓手机。TG 的安卓版需要手机系统内置完整的谷歌服务框架 (GMS) 软件包才能收到验证码。建议更换苹果手机，或者带有 GMS 服务的安卓手机（具体安装教程请谷歌/百度查询）。</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">为什么收不到 Line 的验证码？</div>
+            <div class="faq-a">
+                <div>Line 近期已经大幅加强了防欺诈风控能力，通过机场/VPN 这种共享 IP 来使用，大概率会被识别出来。表面看似没有任何报错，但就是收不到验证码。<br><br>解决方案：<br>一是选择带有“家宽线路（原生住宅 IP）”的英国节点去注册；<br>二是如果没有这样的线路，可以直接开启 gg 卡的漫游上网来完成所有的注册流程（建议暂时关闭手机后台其他 App 的网络访问，避免消耗昂贵的漫游流量）。</div>
+            </div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">为什么收不到 TikTok 国际版抖音的验证码？</div>
+            <div class="faq-a">首先，确保您的卡和 TikTok App 在同一部手机里运行。其次，确保手机里只插了一张 gg 卡（绝对不能同时插着国内 SIM 卡）。最后，建议您更换 VPN 或机场的节点线路，尝试切换到美国、日本、新加坡、英国等地（港台线路较容易受污染被风控）。</div>
+        </div>
+
+        <div class="app-list-container">
+            <h2>平台支持情况清单</h2>
+
+            <div class="list-box list-box-success">
+                <h3>可注册的主流 App（持续更新中）</h3>
+                <ul>
+                    <li>Amazon 英区账号</li>
+                    <li>AppleID 海外账号</li>
+                    <li>ChatGPT（提醒：网络代理一定要开全局模式）</li>
+                    <li>Facebook</li>
+                    <li>Gmail</li>
+                    <li>Instagram</li>
+                    <li>LINE（需使用英国家宽 IP 注册，如果没有，请直接使用 gg 卡漫游流量注册）</li>
+                    <li>Outlook.com</li>
+                    <li>PayPal 英区账号</li>
+                    <li>Twitter (X)</li>
+                    <li>Telegram（需使用移动客户端注册或换绑，注册前后切忌来回切换代理 IP）</li>
+                    <li>TikTok</li>
+                    <li>WeChat 微信（对网络和手机环境要求极高。国内微信号可换绑至 gg 卡，但会导致部分国内金融/支付功能受限）</li>
+                    <li>WhatsApp</li>
+                    <li>WISE 英区账号</li>
+                </ul>
+            </div>
+
+            <div class="list-box list-box-danger">
+                <h3>目前收不到验证码的 App</h3>
+                <ul>
+                    <li>Oldubil（土耳其虚拟银行，系统验证极度抽风，偶尔能收到但极不稳定）</li>
+                    <li>Potato（币圈常用 IM 工具，目前已遭谷歌市场封禁）</li>
+                </ul>
+            </div>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> <a href="https://giffgaff.us">GiffGaff中文使用手册</a></p>
+</footer>
+
+<script>
+    // 动态生成年份
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

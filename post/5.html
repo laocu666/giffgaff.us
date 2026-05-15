@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>国内漫游资费 | GiffGaff中文手册</title>
+    <meta name="description" content="详细了解 Giffgaff 手机卡在中国国内的漫游资费标准，包括上网流量、拨打接听电话及收发短信的扣费规则，并解答首次充值扣费疑问。">
+    <meta name="keywords" content="giffgaff资费,giffgaff漫游,giffgaff中国收费,giffgaff扣费查询">
+    <meta name="author" content="GiffGaff中文使用手册">
+    <link rel="canonical" href="https://giffgaff.us/post/5.html">
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+
+    <meta property="og:title" content="Giffgaff 国内漫游资费一览">
+    <meta property="og:description" content="Giffgaff 在国内漫游怎么收费？收短信免费，发短信0.3镑。查看详细资费表及账单查询方法。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://giffgaff.us/post/5.html">
+    <meta property="og:image" content="https://github.githubassets.com/favicons/favicon.svg">
+
+    <style>
+        /* 全局 CSS 重置 - 抹平浏览器差异 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root { 
+            --primary-color: #f57300; 
+            --text-color: #333333; 
+            --text-muted: #666666;
+            --bg-color: #f4f5f7; 
+            --border-color: #eaeaea;
+        }
+        
+        body { 
+            /* 万能系统字体栈 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7; 
+            color: var(--text-color); 
+            background-color: var(--bg-color); 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .content-card { 
+            background: #ffffff; 
+            padding: 32px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+        }
+
+        /* 顶部导航与图标样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .post-title { 
+            color: var(--text-color); 
+            margin: 0; 
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            color: #666;
+            text-decoration: none;
+            background-color: transparent;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .btn-home:hover, .btn-home:focus {
+            background-color: #f0f0f0;
+            color: var(--primary-color);
+            outline: none;
+        }
+
+        .btn-home svg { fill: currentColor; width: 22px; height: 22px; }
+
+        /* 内容排版 */
+        h2 { 
+            color: var(--primary-color); 
+            font-size: 1.35rem;
+            margin: 32px 0 16px;
+            border-bottom: 2px solid #fff4e6;
+            padding-bottom: 8px;
+        }
+        
+        p { margin-bottom: 16px; }
+
+        a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+        a:hover { text-decoration: underline; }
+
+        /* 图片样式 */
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 6px; 
+            display: block; 
+            margin: 20px 0 32px 0; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+        }
+
+        /* 现代化表格样式 */
+        .table-container {
+            width: 100%;
+            overflow-x: auto;
+            margin: 20px 0;
+            border-radius: 8px;
+            border: 1px solid var(--border-color);
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            font-size: 0.95rem;
+            text-align: left;
+        }
+
+        th, td {
+            padding: 12px 16px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #fafafa;
+            color: var(--text-color);
+            font-weight: 600;
+            white-space: nowrap;
+        }
+
+        tr:last-child td { border-bottom: none; }
+        tr:nth-child(even) { background-color: #fdfdfd; }
+        
+        .highlight-free {
+            color: #2da44e;
+            font-weight: bold;
+        }
+
+        /* 强调提示块 */
+        .important-note { 
+            background: #fff4e6; 
+            border-left: 4px solid #ff922b; 
+            padding: 16px 20px; 
+            margin: 20px 0; 
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        /* FAQ 问答区块美化 */
+        .faq-item {
+            background-color: #f9f9f9;
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 16px;
+        }
+
+        .faq-q {
+            font-weight: 600;
+            color: var(--primary-color);
+            margin-bottom: 10px;
+            font-size: 1.05rem;
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .faq-q::before {
+            content: "Q：";
+            font-weight: bold;
+            margin-right: 6px;
+        }
+
+        .faq-a {
+            color: var(--text-color);
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .faq-a::before {
+            content: "A：";
+            font-weight: bold;
+            color: var(--text-muted);
+            margin-right: 6px;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 0.875rem;
+            color: #888;
+        }
+
+        @media screen and (max-width: 600px) {
+            body { padding: 12px; }
+            .content-card { padding: 20px; }
+            .post-title { font-size: 1.4rem; }
+            th, td { padding: 10px 12px; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="content-card">
+    <header>
+        <h1 class="post-title">国内漫游资费</h1>
+        <a href="https://giffgaff.us" class="btn-home" title="返回首页" aria-label="返回首页">
+            <svg viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
+            </svg>
+        </a>
+    </header>
+
+    <article>
+        <div class="important-note">
+            <strong>单位换算说明：</strong><br>
+            20p 表示 20 便士。1 英镑 = 100 便士，因此 20 便士 = 0.2 英镑。
+        </div>
+
+        <h2>漫游资费明细</h2>
+        <div class="table-container">
+            <table>
+                <thead>
+                    <tr>
+                        <th>通信服务项目</th>
+                        <th>资费标准</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><strong>漫游上网</strong></td>
+                        <td>每兆 0.2 镑 (£0.20 / MB)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>拨打电话及语音信箱</strong></td>
+                        <td>每分钟 1 镑 (£1.00 / Min)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>接听电话</strong></td>
+                        <td>每分钟 1 镑 (£1.00 / Min)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>发送短信</strong></td>
+                        <td>每条 0.3 镑 (£0.30 / Text)</td>
+                    </tr>
+                    <tr>
+                        <td><strong>接收短信</strong></td>
+                        <td class="highlight-free">免费 (Free)</td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+
+        <img src="https://github.com/user-attachments/assets/d180e9e7-def5-4a1b-98f1-737f00810264" alt="Giffgaff 漫游资费截图">
+
+        <h2>疑难解答 (FAQ)</h2>
+
+        <div class="faq-item">
+            <div class="faq-q">为什么首次充值后会被扣 0.01 镑？</div>
+            <div class="faq-a">有不少卡友遇到了这个情况，后期账单里也可以看到此费用为“漫游费”。这通常是系统激活或验证时产生的微小通信交互，有且仅有一次，不会一直扣费，还请安心。</div>
+        </div>
+
+        <div class="faq-item">
+            <div class="faq-q">哪里可以查到通话记录与账单？</div>
+            <div class="faq-a">
+                <div>您可以访问官方使用详情页查询：<a href="https://www.giffgaff.com/profile/usage-statement" target="_blank" rel="nofollow">Usage Statement</a>。<br>一般在激活或产生消费的一周后，官网后台里就可以看到具体的通话记录与账单明细。</div>
+            </div>
+        </div>
+    </article>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> <a href="https://giffgaff.us">GiffGaff中文使用手册</a></p>
+</footer>
+
+<script>
+    // 动态生成年份
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

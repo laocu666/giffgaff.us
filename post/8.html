@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Giffgaff 修改邮箱（新人必看） | GiffGaff中文手册</title>
+    <meta name="description" content="详细图解如何修改 Giffgaff 账户绑定的电子邮箱。支持国内 QQ、网易、阿里云等邮箱，附带完整操作步骤及验证码填写指南。">
+    <meta name="keywords" content="giffgaff修改邮箱,giffgaff设置,giffgaff换邮箱,giffgaff收不到邮件">
+    <meta name="author" content="GiffGaff中文使用手册">
+    <link rel="canonical" href="https://giffgaff.us/post/8.html">
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+
+    <meta property="og:title" content="Giffgaff 修改邮箱教程">
+    <meta property="og:description" content="手把手教你修改 Giffgaff 账户绑定的邮箱，国内邮箱也能完美接收验证码。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://giffgaff.us/post/8.html">
+    <meta property="og:image" content="https://statics.884885.xyz/ggimg/40.png">
+
+    <style>
+        /* 全局 CSS 重置 - 抹平浏览器差异 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root { 
+            --primary-color: #f57300; 
+            --text-color: #333333; 
+            --text-muted: #666666;
+            --bg-color: #f4f5f7; 
+            --border-color: #eaeaea;
+        }
+        
+        body { 
+            /* 万能系统字体栈 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7; 
+            color: var(--text-color); 
+            background-color: var(--bg-color); 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .content-card { 
+            background: #ffffff; 
+            padding: 32px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+        }
+
+        /* 顶部导航与图标样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .post-title { 
+            color: var(--text-color); 
+            margin: 0; 
+            font-size: 1.75rem;
+            font-weight: 700; /* 仅保留大标题自身的粗体 */
+            line-height: 1.3;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            color: #666;
+            text-decoration: none;
+            background-color: transparent;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .btn-home:hover, .btn-home:focus {
+            background-color: #f0f0f0;
+            color: var(--primary-color);
+            outline: none;
+        }
+
+        .btn-home svg { fill: currentColor; width: 22px; height: 22px; }
+
+        /* 内容排版 */
+        h2 { 
+            color: var(--primary-color); 
+            font-size: 1.35rem;
+            margin: 36px 0 16px;
+            border-bottom: 2px solid #fff4e6;
+            padding-bottom: 8px;
+        }
+
+        p { 
+            margin-bottom: 12px; 
+            font-size: 1.05rem;
+        }
+
+        a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+        a:hover { text-decoration: underline; }
+
+        /* 图片样式 */
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 6px; 
+            display: block; 
+            margin: 12px 0 32px 0; /* 增加底部间距区隔步骤 */
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        /* 准备工作提示块 */
+        .important-note { 
+            background: #fff4e6; 
+            border-left: 4px solid #ff922b; 
+            padding: 16px 20px; 
+            margin: 20px 0 32px 0; 
+            border-radius: 0 8px 8px 0;
+            font-size: 0.95rem;
+            color: #444;
+        }
+
+        .important-note p {
+            margin-bottom: 8px;
+        }
+        
+        .important-note p:last-child {
+            margin-bottom: 0;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 0.875rem;
+            color: #888;
+        }
+
+        @media screen and (max-width: 600px) {
+            body { padding: 12px; }
+            .content-card { padding: 20px; }
+            .post-title { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="content-card">
+    <header>
+        <h1 class="post-title">Giffgaff 修改邮箱（新人必看）</h1>
+        <a href="https://giffgaff.us" class="btn-home" title="返回首页" aria-label="返回首页">
+            <svg viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
+            </svg>
+        </a>
+    </header>
+
+    <article>
+        <div class="important-note">
+            <p>修改前准备工作：</p>
+            <p>① 需自备科学上网环境。</p>
+            <p>② 需确保已经重置并知晓账户密码。如果还没有密码，请先参考 <a href="/post/9.html" target="_blank" rel="nofollow">这篇指南</a>。</p>
+        </div>
+
+        <h2>邮箱修改步骤图解</h2>
+
+        <p>首先，登录官网或官方 APP 个人资料页：<a href="https://www.giffgaff.com/profile/details" target="_blank" rel="nofollow">https://www.giffgaff.com/profile/details</a>，点击页面的 Profile and Setting 栏目。</p>
+        <img src="https://statics.884885.xyz/ggimg/40.png" alt="进入 Profile and Setting 页面">
+
+        <p>往下拉页面，找到 Personal details 栏目，找到 My email，点击右侧的 Open 展开设置。</p>
+        <img src="https://statics.884885.xyz/ggimg/41.png" alt="展开 My email 设置">
+
+        <p>再点击 Change email 按钮。</p>
+        <img src="https://statics.884885.xyz/ggimg/42.png" alt="点击 Change email">
+
+        <p>这里需要验证你的账户登录密码，预充值卡的用户请在此前先完成密码重置操作。</p>
+        <img src="https://statics.884885.xyz/ggimg/43.png" alt="输入账户密码验证身份">
+
+        <p>密码验证正确后，会进入修改 email 页面。输入你要绑定的新邮箱地址（国内的 QQ、网易、阿里云邮等都可以正常收到验证码），然后点击 Update email。</p>
+        <img src="https://statics.884885.xyz/ggimg/44.png" alt="输入新的邮箱地址并更新">
+
+        <p>很快你的新邮箱就会收到一份邮件，邮件正文中的红色 6 位数字就是验证码，该验证码在 10 分钟之内有效。</p>
+        <img src="https://statics.884885.xyz/ggimg/45.png" alt="前往邮箱查看验证码">
+
+        <p>回到 giffgaff 官网页面，输入你收到的 6 位验证码，点击 Confirm 进行确认。</p>
+        <img src="https://statics.884885.xyz/ggimg/46.png" alt="输入验证码确认">
+
+        <p>页面提示更新完成，大功告成！</p>
+        <img src="https://statics.884885.xyz/ggimg/47.png" alt="邮箱修改成功">
+
+    </article>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> <a href="https://giffgaff.us">GiffGaff中文使用手册</a></p>
+</footer>
+
+<script>
+    // 动态生成年份
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>

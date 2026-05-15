@@ -1,0 +1,191 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>Giffgaff 修改密码（预付卡用户必看） | GiffGaff中文手册</title>
+    <meta name="description" content="详细图解如何通过手机号码接收短信来修改或重置 Giffgaff 账户密码，预付卡用户新手必备教程。">
+    <meta name="keywords" content="giffgaff修改密码,giffgaff忘记密码,giffgaff找回密码,giffgaff短信重置">
+    <meta name="author" content="GiffGaff中文使用手册">
+    <link rel="canonical" href="https://giffgaff.us/post/9.html">
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+
+    <meta property="og:title" content="Giffgaff 修改密码图文教程">
+    <meta property="og:description" content="忘记了 Giffgaff 密码怎么办？教你如何通过手机短信快速重置密码。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://giffgaff.us/post/9.html">
+    <meta property="og:image" content="https://statics.884885.xyz/ggimg/31.png">
+
+    <style>
+        /* 全局 CSS 重置 - 抹平浏览器差异 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root { 
+            --primary-color: #f57300; 
+            --text-color: #333333; 
+            --text-muted: #666666;
+            --bg-color: #f4f5f7; 
+            --border-color: #eaeaea;
+        }
+        
+        body { 
+            /* 万能系统字体栈 */
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.7; 
+            color: var(--text-color); 
+            background-color: var(--bg-color); 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 20px; 
+            -webkit-font-smoothing: antialiased;
+        }
+        
+        .content-card { 
+            background: #ffffff; 
+            padding: 32px; 
+            border-radius: 12px; 
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
+        }
+
+        /* 顶部导航与图标样式 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 16px;
+            margin-bottom: 24px;
+        }
+
+        .post-title { 
+            color: var(--text-color); 
+            margin: 0; 
+            font-size: 1.75rem;
+            font-weight: 700;
+            line-height: 1.3;
+        }
+
+        .btn-home {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            color: #666;
+            text-decoration: none;
+            background-color: transparent;
+            transition: background-color 0.2s ease, color 0.2s ease;
+            flex-shrink: 0;
+        }
+
+        .btn-home:hover, .btn-home:focus {
+            background-color: #f0f0f0;
+            color: var(--primary-color);
+            outline: none;
+        }
+
+        .btn-home svg { fill: currentColor; width: 22px; height: 22px; }
+
+        /* 内容排版 */
+        h2 { 
+            color: var(--primary-color); 
+            font-size: 1.35rem;
+            margin: 36px 0 16px;
+            border-bottom: 2px solid #fff4e6;
+            padding-bottom: 8px;
+        }
+
+        p { 
+            margin-bottom: 12px; 
+            font-size: 1.05rem;
+        }
+
+        a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
+        a:hover { text-decoration: underline; }
+
+        /* 图片样式 */
+        img { 
+            max-width: 100%; 
+            height: auto; 
+            border-radius: 6px; 
+            display: block; 
+            margin: 12px 0 32px 0; 
+            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+            border: 1px solid var(--border-color);
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 0.875rem;
+            color: #888;
+        }
+
+        @media screen and (max-width: 600px) {
+            body { padding: 12px; }
+            .content-card { padding: 20px; }
+            .post-title { font-size: 1.4rem; }
+        }
+    </style>
+</head>
+<body>
+
+<main class="content-card">
+    <header>
+        <h1 class="post-title">Giffgaff 修改密码（预付卡用户必看）</h1>
+        <a href="https://giffgaff.us" class="btn-home" title="返回首页" aria-label="返回首页">
+            <svg viewBox="0 0 16 16">
+                <path fill-rule="evenodd" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
+            </svg>
+        </a>
+    </header>
+
+    <article>
+        <p>首先，我们来修改密码</p>
+
+        <h2>密码重置步骤图解</h2>
+
+        <p>第一步：登录 Giffgaff 官网登录页面，<a href="https://www.giffgaff.com/auth/login" target="_blank" rel="nofollow">https://www.giffgaff.com/auth/login</a></p>
+        <p>点击页面中标红按钮的【Forgot your password/忘记你的密码】</p>
+        <img src="https://statics.884885.xyz/ggimg/31.png" alt="点击忘记你的密码">
+
+        <p>第二步：选择第一项【Phone number/电话号码】，点击黄色按钮【Next/下一步】</p>
+        <img src="https://statics.884885.xyz/ggimg/32.png" alt="选择电话号码方式重置">
+
+        <p>第三步：输入您的 giffgaff 手机号码，点击黄色按钮【Next/下一步】。这里输入的手机号码格式为 07xxxxxxxxx，去掉英国区号+44，保留中间的 0。如果不知道自己的手机号码，请发短信 NUMBER 到 43430，一会儿就会收到一条内含手机号码和用户名的短信。</p>
+        <img src="https://statics.884885.xyz/ggimg/33.png" alt="输入您的手机号码">
+
+        <p>第四步：选择【Text message/短信】，点击下方黄色按钮【Send a reset link/发出重置链接】</p>
+        <img src="https://statics.884885.xyz/ggimg/34.png" alt="选择短信验证方式">
+        <img src="https://statics.884885.xyz/ggimg/35.png" alt="发送重置链接成功提示">
+
+        <p>第五步：收到重置短信，并点击短信内置链接后，创建一个新的密码</p>
+        <img src="https://statics.884885.xyz/ggimg/36.png" alt="手机收到重置短信">
+        <img src="https://statics.884885.xyz/ggimg/37.png" alt="在页面中创建新密码">
+
+        <p>最后，重置成功！而且邮箱也会收到一份提醒邮件。</p>
+        <img src="https://statics.884885.xyz/ggimg/38.png" alt="密码修改完成">
+
+    </article>
+</main>
+
+<footer>
+    <p>&copy; <span id="year"></span> <a href="https://giffgaff.us">GiffGaff中文使用手册</a></p>
+</footer>
+
+<script>
+    // 动态生成年份
+    document.getElementById("year").textContent = new Date().getFullYear();
+</script>
+
+</body>
+</html>
