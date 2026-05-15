@@ -1,0 +1,266 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>GiffGaff中文使用手册 | 官方指南首页</title>
+    <meta name="description" content="微信中文咨询 myeSIM 或 546477588。提供英国 Giffgaff 手机卡充值激活、换号、eSIM转换、保号等全套中文图文指南。">
+    <meta name="keywords" content="giffgaff,giffgaff中文,英国手机卡,giffgaff激活,giffgaff充值,eSIM,giffgaff保号">
+    
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="baiduspider" content="index, follow">
+
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="applicable-device" content="pc,mobile">
+
+    <meta name="screen-orientation" content="portrait">
+    <meta name="x5-orientation" content="portrait">
+    <meta name="browsermode" content="application">
+
+    <link rel="canonical" href="https://giffgaff.us/">
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+
+    <style>
+        /* 全局 CSS 重置 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root { 
+            --primary-color: #f57300; 
+            --text-main: #333333; 
+            --text-muted: #666666;
+            --bg-color: #f4f5f7; /* 与文章页背景色完全一致 */
+            --card-bg: #ffffff;
+            --border-color: #eaeaea;
+            --tag-bg: #150D24;
+            --tag-esim: #238C22;
+        }
+
+        /* 仅适配文字颜色，背景强制锁定亮色 */
+        @media (prefers-color-scheme: dark) {
+            :root {
+                --text-main: #222222;
+                --text-muted: #555555;
+            }
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.4; 
+            color: var(--text-main); 
+            background-color: var(--bg-color); 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 15px; /* 缩小页面边距 */
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 顶部通栏 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .header-logo {
+            width: 36px;
+            height: 36px;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+        }
+
+        .header-left:hover .header-logo { transform: rotate(360deg); }
+
+        .site-title { font-size: 1.2rem; font-weight: 700; }
+
+        .header-right { display: flex; gap: 2px; }
+
+        .icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .icon-btn:hover { background: rgba(0,0,0,0.05); color: var(--primary-color); }
+        .icon-btn svg { fill: currentColor; width: 16px; height: 16px; }
+
+        /* 公告区域 */
+        .announcement {
+            background: var(--card-bg);
+            border-left: 3px solid var(--primary-color);
+            padding: 10px 14px;
+            border-radius: 4px;
+            margin-bottom: 15px;
+            color: var(--text-main);
+            font-size: 0.85rem;
+            box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+        }
+
+        .announcement a { color: var(--primary-color); text-decoration: none; }
+
+        /* 超紧凑型文章列表 */
+        .article-list { display: flex; flex-direction: column; gap: 5px; } /* 缩小列表间距 */
+
+        .article-item {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px 14px; /* 极简内边距 */
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.15s ease;
+        }
+
+        .article-item:hover {
+            border-color: var(--primary-color);
+            transform: translateX(3px);
+            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+        }
+
+        .article-title {
+            font-size: 0.92rem;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .tags { display: flex; gap: 4px; flex-shrink: 0; margin-left: 8px; }
+
+        .tag {
+            font-size: 0.6rem;
+            color: #ffffff;
+            padding: 1px 5px;
+            border-radius: 3px;
+            white-space: nowrap;
+        }
+
+        .tag-main { background-color: var(--tag-bg); }
+        .tag-esim { background-color: var(--tag-esim); }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 15px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        @media screen and (max-width: 600px) {
+            body { padding: 10px; }
+            .article-item { padding: 7px 12px; }
+            .article-title { font-size: 0.88rem; }
+            .site-title { font-size: 1rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="https://giffgaff.us" class="header-left">
+            <img src="https://github.githubassets.com/favicons/favicon.svg" alt="Logo" class="header-logo">
+            <span class="site-title">GiffGaff中文手册</span>
+        </a>
+        <div class="header-right">
+            <a href="https://giffgaff.us/tag.html" class="icon-btn" title="搜索">
+                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+            </a>
+            <a href="https://giffgaff.us/rss.xml" target="_blank" class="icon-btn" title="RSS">
+                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"></path></svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="announcement">
+        <p>微信：myeSIM 或 546477588</p>
+        <p>订购：<a href="https://shop.giffgaff.us" target="_blank" rel="nofollow">https://shop.giffgaff.us</a></p>
+    </div>
+
+    <main class="article-list">
+        <a href="post/12.html" class="article-item">
+            <div class="article-title">Giffgaff 英国SIM卡简介</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
+        </a>
+        <a href="post/11.html" class="article-item">
+            <div class="article-title">Giffgaff 购卡链接</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
+        </a>
+        <a href="post/10.html" class="article-item">
+            <div class="article-title">Giffgaff 充值激活指南</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
+        </a>
+        <a href="post/9.html" class="article-item">
+            <div class="article-title">Giffgaff 修改密码</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+        </a>
+        <a href="post/8.html" class="article-item">
+            <div class="article-title">Giffgaff 修改邮箱</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+        </a>
+        <a href="post/7.html" class="article-item">
+            <div class="article-title">Giffgaff 常见问题</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+        </a>
+        <a href="post/6.html" class="article-item">
+            <div class="article-title">Giffgaff 常用功能</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+        </a>
+        <a href="post/5.html" class="article-item">
+            <div class="article-title">国内漫游资费</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+        </a>
+        <a href="post/4.html" class="article-item">
+            <div class="article-title">注册接码问题</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+        </a>
+        <a href="post/3.html" class="article-item">
+            <div class="article-title">保号攻略</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+        </a>
+        <a href="post/2.html" class="article-item">
+            <div class="article-title">实体卡转eSIM指南</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
+        </a>
+        <a href="post/1.html" class="article-item">
+            <div class="article-title">giffgaff 换号操作</div>
+            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+        </a>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> GiffGaff中文使用手册</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+    </script>
+</body>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    <title>搜索与标签 - GiffGaff中文手册</title>
+    <meta name="description" content="通过标签或关键词搜索 Giffgaff 中文手册中的所有指南，快速查找关于激活、充值、eSIM、保号等常见问题的解决方案。">
+    <meta name="keywords" content="giffgaff搜索,giffgaff标签,giffgaff指南查找">
+    <meta name="robots" content="index, follow">
+    <meta name="googlebot" content="index, follow">
+    <meta name="baiduspider" content="index, follow">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="applicable-device" content="pc,mobile">
+    <meta name="screen-orientation" content="portrait">
+
+    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+
+    <style>
+        /* 全局 CSS 重置 */
+        *, *::before, *::after {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            -webkit-tap-highlight-color: transparent;
+        }
+
+        :root { 
+            --primary-color: #f57300; 
+            --text-main: #333333; 
+            --text-muted: #666666;
+            --bg-color: #f4f5f7; 
+            --card-bg: #ffffff;
+            --border-color: #eaeaea;
+        }
+
+        /* 仅适配文字，背景锁定亮色 */
+        @media (prefers-color-scheme: dark) {
+            :root { --text-main: #222222; --text-muted: #555555; }
+        }
+        
+        body { 
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+            line-height: 1.4; 
+            color: var(--text-main); 
+            background-color: var(--bg-color); 
+            max-width: 800px; 
+            margin: 0 auto; 
+            padding: 15px; 
+            -webkit-font-smoothing: antialiased;
+        }
+
+        /* 顶部导航 */
+        header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-bottom: 12px;
+            margin-bottom: 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        .header-left {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            text-decoration: none;
+            color: var(--text-main);
+        }
+
+        .site-title { font-size: 1.2rem; font-weight: 700; }
+
+        .header-right { display: flex; gap: 4px; align-items: center; }
+
+        .icon-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            color: var(--text-muted);
+            text-decoration: none;
+            transition: all 0.2s;
+        }
+
+        .icon-btn:hover { background: rgba(0,0,0,0.05); color: var(--primary-color); }
+        .icon-btn svg { fill: currentColor; width: 16px; height: 16px; }
+
+        /* 搜索区域 */
+        .search-container {
+            display: flex;
+            margin-bottom: 15px;
+            gap: 8px;
+        }
+
+        .search-input {
+            flex: 1;
+            height: 36px;
+            padding: 0 12px;
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            font-size: 0.9rem;
+            outline: none;
+            background: var(--card-bg);
+        }
+
+        .search-input:focus { border-color: var(--primary-color); }
+
+        .search-btn {
+            height: 36px;
+            padding: 0 16px;
+            background-color: var(--primary-color);
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: opacity 0.2s;
+        }
+
+        .search-btn:hover { opacity: 0.9; }
+
+        /* 标签云区域 */
+        .tag-cloud {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+            padding: 12px;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+        }
+
+        .tag-pill {
+            font-size: 0.75rem;
+            padding: 4px 10px;
+            border-radius: 20px;
+            background: var(--bg-color);
+            color: var(--text-muted);
+            cursor: pointer;
+            transition: all 0.2s;
+            border: 1px solid var(--border-color);
+        }
+
+        .tag-pill:hover, .tag-pill.active {
+            background: var(--primary-color);
+            color: #fff;
+            border-color: var(--primary-color);
+        }
+
+        .tag-count { font-size: 0.7rem; opacity: 0.7; margin-left: 4px; }
+
+        /* 文章列表 (同首页样式) */
+        .article-list { display: flex; flex-direction: column; gap: 5px; }
+
+        .article-item {
+            display: none; /* 初始隐藏，由 JS 控制显示 */
+            justify-content: space-between;
+            align-items: center;
+            background: var(--card-bg);
+            border: 1px solid var(--border-color);
+            border-radius: 6px;
+            padding: 8px 14px;
+            text-decoration: none;
+            color: var(--text-main);
+            transition: all 0.15s ease;
+        }
+
+        .article-item:hover {
+            border-color: var(--primary-color);
+            transform: translateX(3px);
+            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
+        }
+
+        .article-title {
+            font-size: 0.92rem;
+            flex: 1;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .not-found {
+            display: none;
+            text-align: center;
+            padding: 40px;
+            color: var(--text-muted);
+            font-size: 0.95rem;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding-bottom: 15px;
+            font-size: 0.75rem;
+            color: var(--text-muted);
+        }
+
+        @media screen and (max-width: 600px) {
+            body { padding: 10px; }
+            .article-item { padding: 7px 12px; }
+            .article-title { font-size: 0.88rem; }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <a href="https://giffgaff.us" class="header-left">
+            <span class="site-title">GiffGaff中文手册</span>
+        </a>
+        <div class="header-right">
+            <a href="https://giffgaff.us" class="icon-btn" title="返回首页">
+                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 010 1.06L5.56 6.69h6.69a.75.75 0 010 1.5H5.56l2.66 2.66a.75.75 0 01-1.06 1.06l-3.94-3.94a.75.75 0 010-1.06l3.94-3.94a.75.75 0 011.06 0z"></path></svg>
+            </a>
+        </div>
+    </header>
+
+    <div class="search-container">
+        <input type="search" class="search-input" id="searchInput" placeholder="搜索指南标题..." aria-label="搜索">
+        <button class="search-btn" onclick="executeSearch()">搜索</button>
+    </div>
+
+    <div class="tag-cloud" id="tagCloud">
+        <span class="tag-pill active" onclick="filterByTag('All', this)">全部</span>
+        </div>
+
+    <main class="article-list" id="articleList">
+        </main>
+
+    <div class="not-found" id="notFound">未找到相关内容</div>
+
+    <footer>
+        <p>&copy; <span id="year"></span> GiffGaff中文使用手册</p>
+    </footer>
+
+    <script>
+        document.getElementById("year").textContent = new Date().getFullYear();
+
+        let postData = [];
+        const articleList = document.getElementById('articleList');
+        const tagCloud = document.getElementById('tagCloud');
+        const notFound = document.getElementById('notFound');
+        const searchInput = document.getElementById('searchInput');
+
+        // 加载数据
+        fetch('postList.json')
+            .then(res => res.json())
+            .then(data => {
+                // 处理数据：排除颜色字典，仅保留文章项
+                postData = Object.keys(data)
+                    .filter(key => key !== 'labelColorDict')
+                    .map(key => data[key]);
+                
+                renderTags(data.labelColorDict, data);
+                renderArticles();
+                checkHash();
+            });
+
+        function renderTags(colorDict, fullData) {
+            const counts = {};
+            postData.forEach(post => {
+                post.labels.forEach(l => counts[l] = (counts[l] || 0) + 1);
+            });
+
+            Object.keys(counts).sort((a,b) => counts[b] - counts[a]).forEach(tag => {
+                const span = document.createElement('span');
+                span.className = 'tag-pill';
+                span.innerHTML = `${tag} <span class="tag-count">${counts[tag]}</span>`;
+                span.onclick = (e) => filterByTag(tag, span);
+                tagCloud.appendChild(span);
+            });
+        }
+
+        function renderArticles() {
+            postData.forEach(post => {
+                const a = document.createElement('a');
+                a.href = post.postUrl;
+                a.className = 'article-item';
+                a.dataset.title = post.postTitle.toUpperCase();
+                a.dataset.labels = post.labels.join('|');
+                a.innerHTML = `<div class="article-title">${post.postTitle}</div>`;
+                articleList.appendChild(a);
+            });
+            filterByTag('All');
+        }
+
+        function filterByTag(tag, element) {
+            if(element) {
+                document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
+                element.classList.add('active');
+            }
+            
+            let visibleCount = 0;
+            const items = document.querySelectorAll('.article-item');
+            items.forEach(item => {
+                if(tag === 'All' || item.dataset.labels.split('|').includes(tag)) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+
+            notFound.style.display = visibleCount === 0 ? 'block' : 'none';
+            if(tag !== 'All') window.location.hash = tag;
+        }
+
+        function executeSearch() {
+            const term = searchInput.value.toUpperCase();
+            if(!term) { filterByTag('All'); return; }
+
+            document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
+            let visibleCount = 0;
+            const items = document.querySelectorAll('.article-item');
+            items.forEach(item => {
+                if(item.dataset.title.includes(term)) {
+                    item.style.display = 'flex';
+                    visibleCount++;
+                } else {
+                    item.style.display = 'none';
+                }
+            });
+            notFound.style.display = visibleCount === 0 ? 'block' : 'none';
+            window.location.hash = term;
+        }
+
+        function checkHash() {
+            const hash = decodeURIComponent(window.location.hash.slice(1));
+            if(hash) {
+                const tags = Array.from(document.querySelectorAll('.tag-pill'));
+                const targetTag = tags.find(t => t.textContent.includes(hash));
+                if(targetTag) {
+                    filterByTag(hash, targetTag);
+                } else {
+                    searchInput.value = hash;
+                    executeSearch();
+                }
+            }
+        }
+
+        // 监听回车键搜索
+        searchInput.addEventListener('keypress', (e) => {
+            if (e.key === 'Enter') executeSearch();
+        });
+    </script>
+</body>
+</html>
