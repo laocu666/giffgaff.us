@@ -13,13 +13,18 @@
     <meta name="baiduspider" content="index, follow">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
     <meta name="applicable-device" content="pc,mobile">
-    <meta name="screen-orientation" content="portrait">
-
-    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
+    <link rel="canonical" href="https://giffgaff.us/tag.html">
+    <link rel="icon" href="https://www.giffgaff.com/favicon.ico">
+    <meta property="og:title" content="搜索与标签 - GiffGaff中文手册">
+    <meta property="og:url" content="https://giffgaff.us/tag.html">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="GiffGaff中文手册">
 
     <style>
-        /* 全局 CSS 重置 */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -35,11 +40,6 @@
             --card-bg: #ffffff;
             --border-color: #eaeaea;
         }
-
-        /* 仅适配文字，背景锁定亮色 */
-        @media (prefers-color-scheme: dark) {
-            :root { --text-main: #222222; --text-muted: #555555; }
-        }
         
         body { 
             font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
@@ -52,7 +52,6 @@
             -webkit-font-smoothing: antialiased;
         }
 
-        /* 顶部导航 */
         header {
             display: flex;
             justify-content: space-between;
@@ -78,8 +77,8 @@
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             color: var(--text-muted);
             text-decoration: none;
@@ -87,9 +86,8 @@
         }
 
         .icon-btn:hover { background: rgba(0,0,0,0.05); color: var(--primary-color); }
-        .icon-btn svg { fill: currentColor; width: 16px; height: 16px; }
+        .icon-btn svg { fill: currentColor; width: 18px; height: 18px; }
 
-        /* 搜索区域 */
         .search-container {
             display: flex;
             margin-bottom: 15px;
@@ -98,7 +96,7 @@
 
         .search-input {
             flex: 1;
-            height: 36px;
+            height: 44px;
             padding: 0 12px;
             border: 1px solid var(--border-color);
             border-radius: 6px;
@@ -110,7 +108,7 @@
         .search-input:focus { border-color: var(--primary-color); }
 
         .search-btn {
-            height: 36px;
+            height: 44px;
             padding: 0 16px;
             background-color: var(--primary-color);
             color: #fff;
@@ -123,7 +121,6 @@
 
         .search-btn:hover { opacity: 0.9; }
 
-        /* 标签云区域 */
         .tag-cloud {
             display: flex;
             flex-wrap: wrap;
@@ -154,20 +151,20 @@
 
         .tag-count { font-size: 0.7rem; opacity: 0.7; margin-left: 4px; }
 
-        /* 文章列表 (同首页样式) */
         .article-list { display: flex; flex-direction: column; gap: 5px; }
 
         .article-item {
-            display: none; /* 初始隐藏，由 JS 控制显示 */
+            display: none;
             justify-content: space-between;
             align-items: center;
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 8px 14px;
+            padding: 10px 14px;
             text-decoration: none;
             color: var(--text-main);
             transition: all 0.15s ease;
+            gap: 10px;
         }
 
         .article-item:hover {
@@ -176,12 +173,13 @@
             box-shadow: 0 1px 5px rgba(0,0,0,0.05);
         }
 
+        /* 修复：移除 white-space:nowrap，允许标题换行 */
         .article-title {
-            font-size: 0.92rem;
+            font-size: 0.95rem;
             flex: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            min-width: 0;
+            word-break: break-word;
+            line-height: 1.4;
         }
 
         .not-found {
@@ -195,15 +193,15 @@
         footer {
             text-align: center;
             margin-top: 30px;
-            padding-bottom: 15px;
+            padding-bottom: env(safe-area-inset-bottom, 15px);
             font-size: 0.75rem;
             color: var(--text-muted);
         }
 
         @media screen and (max-width: 600px) {
             body { padding: 10px; }
-            .article-item { padding: 7px 12px; }
-            .article-title { font-size: 0.88rem; }
+            .article-item { padding: 9px 12px; }
+            .article-title { font-size: 0.9rem; }
         }
     </style>
 </head>
@@ -214,25 +212,24 @@
             <span class="site-title">GiffGaff中文手册</span>
         </a>
         <div class="header-right">
-            <a href="https://giffgaff.us" class="icon-btn" title="返回首页">
-                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 010 1.06L5.56 6.69h6.69a.75.75 0 010 1.5H5.56l2.66 2.66a.75.75 0 01-1.06 1.06l-3.94-3.94a.75.75 0 010-1.06l3.94-3.94a.75.75 0 011.06 0z"></path></svg>
+            <a href="https://giffgaff.us" class="icon-btn" title="返回首页" aria-label="返回首页">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 010 1.06L5.56 6.69h6.69a.75.75 0 010 1.5H5.56l2.66 2.66a.75.75 0 01-1.06 1.06l-3.94-3.94a.75.75 0 010-1.06l3.94-3.94a.75.75 0 011.06 0z"></path></svg>
             </a>
         </div>
     </header>
 
     <div class="search-container">
-        <input type="search" class="search-input" id="searchInput" placeholder="搜索指南标题..." aria-label="搜索">
+        <input type="search" class="search-input" id="searchInput" placeholder="搜索指南标题..." aria-label="搜索文章">
         <button class="search-btn" onclick="executeSearch()">搜索</button>
     </div>
 
     <div class="tag-cloud" id="tagCloud">
         <span class="tag-pill active" onclick="filterByTag('All', this)">全部</span>
-        </div>
+    </div>
 
-    <main class="article-list" id="articleList">
-        </main>
+    <main class="article-list" id="articleList"></main>
 
-    <div class="not-found" id="notFound">未找到相关内容</div>
+    <div class="not-found" id="notFound" role="status">未找到相关内容</div>
 
     <footer>
         <p>&copy; <span id="year"></span> GiffGaff中文使用手册</p>
@@ -247,15 +244,12 @@
         const notFound = document.getElementById('notFound');
         const searchInput = document.getElementById('searchInput');
 
-        // 加载数据
         fetch('postList.json')
             .then(res => res.json())
             .then(data => {
-                // 处理数据：排除颜色字典，仅保留文章项
                 postData = Object.keys(data)
                     .filter(key => key !== 'labelColorDict')
                     .map(key => data[key]);
-                
                 renderTags(data.labelColorDict, data);
                 renderArticles();
                 checkHash();
@@ -266,12 +260,11 @@
             postData.forEach(post => {
                 post.labels.forEach(l => counts[l] = (counts[l] || 0) + 1);
             });
-
             Object.keys(counts).sort((a,b) => counts[b] - counts[a]).forEach(tag => {
                 const span = document.createElement('span');
                 span.className = 'tag-pill';
                 span.innerHTML = `${tag} <span class="tag-count">${counts[tag]}</span>`;
-                span.onclick = (e) => filterByTag(tag, span);
+                span.onclick = () => filterByTag(tag, span);
                 tagCloud.appendChild(span);
             });
         }
@@ -290,40 +283,29 @@
         }
 
         function filterByTag(tag, element) {
-            if(element) {
+            if (element) {
                 document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
                 element.classList.add('active');
             }
-            
             let visibleCount = 0;
-            const items = document.querySelectorAll('.article-item');
-            items.forEach(item => {
-                if(tag === 'All' || item.dataset.labels.split('|').includes(tag)) {
-                    item.style.display = 'flex';
-                    visibleCount++;
-                } else {
-                    item.style.display = 'none';
-                }
+            document.querySelectorAll('.article-item').forEach(item => {
+                const show = tag === 'All' || item.dataset.labels.split('|').includes(tag);
+                item.style.display = show ? 'flex' : 'none';
+                if (show) visibleCount++;
             });
-
             notFound.style.display = visibleCount === 0 ? 'block' : 'none';
-            if(tag !== 'All') window.location.hash = tag;
+            if (tag !== 'All') window.location.hash = tag;
         }
 
         function executeSearch() {
             const term = searchInput.value.toUpperCase();
-            if(!term) { filterByTag('All'); return; }
-
+            if (!term) { filterByTag('All'); return; }
             document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
             let visibleCount = 0;
-            const items = document.querySelectorAll('.article-item');
-            items.forEach(item => {
-                if(item.dataset.title.includes(term)) {
-                    item.style.display = 'flex';
-                    visibleCount++;
-                } else {
-                    item.style.display = 'none';
-                }
+            document.querySelectorAll('.article-item').forEach(item => {
+                const show = item.dataset.title.includes(term);
+                item.style.display = show ? 'flex' : 'none';
+                if (show) visibleCount++;
             });
             notFound.style.display = visibleCount === 0 ? 'block' : 'none';
             window.location.hash = term;
@@ -331,10 +313,9 @@
 
         function checkHash() {
             const hash = decodeURIComponent(window.location.hash.slice(1));
-            if(hash) {
-                const tags = Array.from(document.querySelectorAll('.tag-pill'));
-                const targetTag = tags.find(t => t.textContent.includes(hash));
-                if(targetTag) {
+            if (hash) {
+                const targetTag = Array.from(document.querySelectorAll('.tag-pill')).find(t => t.textContent.includes(hash));
+                if (targetTag) {
                     filterByTag(hash, targetTag);
                 } else {
                     searchInput.value = hash;
@@ -343,10 +324,7 @@
             }
         }
 
-        // 监听回车键搜索
-        searchInput.addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') executeSearch();
-        });
+        searchInput.addEventListener('keypress', e => { if (e.key === 'Enter') executeSearch(); });
     </script>
 </body>
 </html>
