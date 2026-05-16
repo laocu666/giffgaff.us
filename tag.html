@@ -5,8 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>搜索与标签 - GiffGaff中文手册</title>
-    <meta name="description" content="通过标签或关键词搜索 Giffgaff 中文手册中的所有指南，快速查找关于激活、充值、eSIM、保号等常见问题的解决方案。">
-    <meta name="keywords" content="giffgaff搜索,giffgaff激活,giffgaff充值,giffgaff eSIM,giffgaff保号,英国手机卡指南">
+    <meta name="description" content="通过标签或关键词搜索 Giffgaff 中文手册中的所有指南，快速查找关于激活、充值、eSIM、保号、WeChat、Telegram等常见问题的解决方案。">
+    <meta name="keywords" content="giffgaff搜索,giffgaff激活,giffgaff充值,giffgaff eSIM,giffgaff保号,giffgaff注册WeChat,giffgaff注册Telegram,英国手机卡指南">
     <meta name="robots" content="index, follow">
     <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-transform">
@@ -19,7 +19,7 @@
     <meta property="og:site_name" content="GiffGaff中文手册">
     <style>
         *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
-        :root{--primary:#f57300;--text:#333;--muted:#666;--bg:#f4f5f7;--card:#fff;--border:#eaeaea;--tag-bg:#150D24;--tag-esim:#238C22}
+        :root{--primary:#f57300;--text:#333;--muted:#666;--bg:#f4f5f7;--card:#fff;--border:#eaeaea;--tag-bg:#150D24;--tag-esim:#238C22;--tag-wechat:#07c160;--tag-tg:#229ED9}
         body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.4;color:var(--text);background:var(--bg);max-width:830px;margin:0 auto;padding:15px;-webkit-font-smoothing:antialiased}
         .search-row{display:flex;margin-bottom:15px;gap:8px}
         .search-input{flex:1;height:40px;padding:0 14px;border:1px solid var(--border);border-radius:8px;font-size:.95rem;outline:none;background:var(--card)}
@@ -36,14 +36,14 @@
         .article-title{font-size:.95rem;font-weight:500;word-break:break-word;line-height:1.4}
         .article-kws{font-size:.72rem;color:var(--muted);margin-top:4px;display:flex;gap:8px;flex-wrap:wrap}
         .article-kws span::before{content:"#";opacity:.5}
-        .article-tags{display:flex;gap:4px;flex-shrink:0;margin-left:10px}
+        .article-tags{display:flex;gap:4px;flex-shrink:0;margin-left:10px;flex-wrap:wrap;justify-content:flex-end}
         .tag{font-size:.65rem;color:#fff;padding:2px 6px;border-radius:4px;white-space:nowrap}
         .tag-main{background:var(--tag-bg)}.tag-esim{background:var(--tag-esim)}
+        .tag-wechat{background:var(--tag-wechat)}.tag-tg{background:var(--tag-tg)}
         .not-found{display:none;text-align:center;padding:40px;color:var(--muted)}
         footer{text-align:center;margin-top:30px;padding-bottom:env(safe-area-inset-bottom,15px);font-size:.75rem;color:var(--muted)}
         @media(max-width:600px){body{padding:10px}}
 
-        /* ===== 全局导航栏 ===== */
         .site-nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #eaeaea;box-shadow:0 2px 8px rgba(0,0,0,.06);margin:-15px -15px 15px -15px}
         .site-nav-inner{max-width:830px;margin:0 auto;padding:0 15px;display:flex;align-items:center;height:52px;gap:2px}
         .site-nav-logo{font-size:.95rem;font-weight:700;color:#f57300;text-decoration:none;margin-right:auto;white-space:nowrap;display:flex;align-items:center;gap:7px}
@@ -95,8 +95,10 @@
 
     <script>
     document.getElementById("yr").textContent=new Date().getFullYear();
-    const TC={giffgaff:"tag-main",esim:"tag-esim",PayPal:"tag-main","英国":"tag-esim"};
+    const TC={giffgaff:"tag-main",esim:"tag-esim",PayPal:"tag-main","英国":"tag-esim",WeChat:"tag-wechat",Telegram:"tag-tg"};
     const posts=[
+  {url:"post/18.html",title:"\u7528 Giffgaff \u53f7\u7801\u6ce8\u518c WeChat \u8d26\u53f7\uff08\u5fae\u4fe1\u6d77\u5916\u7248\uff09",tags:["giffgaff", "WeChat"],keywords:["giffgaff\u6ce8\u518cWeChat", "WeChat\u4e0e\u5fae\u4fe1\u533a\u522b", "\u82f1\u56fd\u53f7\u7801\u6ce8\u518c\u5fae\u4fe1\u6d77\u5916\u7248"]},
+  {url:"post/17.html",title:"\u7528 Giffgaff \u53f7\u7801\u6ce8\u518c Telegram \u7535\u62a5\u8d26\u53f7",tags:["giffgaff", "Telegram"],keywords:["giffgaff\u6ce8\u518cTelegram", "Telegram\u6536\u4e0d\u5230\u9a8c\u8bc1\u7801", "\u82f1\u56fd\u53f7\u7801\u6ce8\u518c\u7535\u62a5"]},
   {url:"post/12.html",title:"Giffgaff \u82f1\u56fdSIM\u5361\u7b80\u4ecb",tags:["giffgaff", "esim"],keywords:["\u82f1\u56fdSIM\u5361\u8d2d\u4e70", "giffgaff\u662f\u4ec0\u4e48", "\u82f1\u56fd\u624b\u673a\u5361\u4e2d\u56fd\u4f7f\u7528"]},
   {url:"post/paypal-gb.html",title:"\u624b\u628a\u624b\u6559\u4f60\u6ce8\u518c\u4e00\u4e2a\u82f1\u56fd PayPal \u8d26\u6237\uff01\u5e76\u83b7\u5f9710\u82f1\u9551\u8d60\u91d1",tags:["PayPal", "\u82f1\u56fd"],keywords:["\u82f1\u56fdPayPal\u6ce8\u518c", "PayPal\u82f1\u9551\u8d26\u6237\u5f00\u901a", "\u82f1\u56fdPayPal10\u82f1\u9551\u5956\u52b1"]},
   {url:"post/11.html",title:"Giffgaff \u8d2d\u5361\u94fe\u63a5",tags:["giffgaff", "esim"],keywords:["giffgaff\u8d2d\u5361", "\u82f1\u56fdSIM\u5361\u8d2d\u4e70\u94fe\u63a5", "giffgaff\u5b98\u7f51\u8ba2\u8d2d"]},
@@ -110,7 +112,6 @@
   {url:"post/3.html",title:"\u4fdd\u53f7\u653b\u7565",tags:["giffgaff"],keywords:["giffgaff\u4fdd\u53f7", "giffgaff\u53f7\u7801\u4fdd\u7559", "\u82f1\u56fd\u624b\u673a\u5361\u957f\u671f\u4fdd\u53f7\u65b9\u6cd5"]},
   {url:"post/2.html",title:"\u5b9e\u4f53\u5361\u8f6ceSIM\u6307\u5357",tags:["giffgaff", "esim"],keywords:["giffgaff\u8f6ceSIM", "giffgaff\u5b9e\u4f53\u5361\u6362eSIM", "\u82f1\u56fdSIM\u5361eSIM\u6559\u7a0b"]},
   {url:"post/1.html",title:"giffgaff \u6362\u53f7\u64cd\u4f5c\u6307\u5357",tags:["giffgaff"],keywords:["giffgaff\u6362\u53f7", "giffgaff\u66f4\u6362\u53f7\u7801", "giffgaff\u907f\u5f00\u6570\u5b574\u6362\u53f7"]},
-  {url:"post/18.html",title:"Giffgaff eSIM\u6fc0\u6d3b\u6559\u7a0b",tags:["giffgaff", "esim"],keywords:["giffgaff eSIM\u6fc0\u6d3b", "giffgaff\u7535\u5b50SIM\u5361", "giffgaff eSIM\u4e2d\u56fd\u4f7f\u7528"]},
   {url:"post/paypal-uk.html",title:"\u82f1\u56fdPayPal\u4f7f\u7528\u6307\u5357",tags:["PayPal", "\u82f1\u56fd"],keywords:["\u82f1\u56fdPayPal\u4f7f\u7528", "PayPal\u82f1\u56fd\u8d26\u6237\u5145\u503c", "\u82f1\u56fdPayPal\u7ed1\u5b9a\u94f6\u884c\u5361"]}
 ];
     let curTag='All',curQ='';
