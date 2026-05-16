@@ -188,7 +188,17 @@
             white-space: normal;
             display: flex;
             align-items: center;
-            gap: 6px;
+            gap: 7px;
+        }
+        .site-nav-logo img {
+            width: 28px;
+            height: 28px;
+            border-radius: 50%;
+            transition: transform 0.5s ease;
+            display: block;
+        }
+        .site-nav-logo:hover img {
+            transform: rotate(360deg);
         }
         .site-nav a.nav-link {
             display: inline-flex;
@@ -242,13 +252,9 @@
 <body>
 <nav class="site-nav" aria-label="全局导航">
   <div class="site-nav-inner">
-    <a href="/" class="site-nav-logo" aria-label="GiffGaff中文手册首页">
-      <svg width="20" height="20" viewBox="0 0 24 24" fill="none" aria-hidden="true">
-        <circle cx="12" cy="12" r="10" fill="#f57300" opacity=".15"/>
-        <path d="M8 12a4 4 0 1 1 4 4v2" stroke="#f57300" stroke-width="2" stroke-linecap="round"/>
-        <circle cx="12" cy="20" r="1" fill="#f57300"/>
-      </svg>
-      GiffGaff手册
+    <a href="/" class="site-nav-logo">
+      <img src="https://www.giffgaff.com/apple-touch-icon.png" alt="GiffGaff Logo" width="28" height="28">
+      GiffGaff中文手册
     </a>
     <a href="/" class="nav-link">
       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V12h6v9"/></svg>
