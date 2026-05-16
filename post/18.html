@@ -4,315 +4,217 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
-    <title>Giffgaff 购卡链接 | GiffGaff中文手册</title>
-    <meta name="description" content="Giffgaff 实体卡官方购卡通道。提供发货说明、注意事项及充值激活代办服务。首次充值 10 英镑即可获赠 5 英镑奖励金。">
-    <meta name="keywords" content="giffgaff买卡,giffgaff购卡,giffgaff实体卡,giffgaff中国购买">
+    <title>用 Giffgaff 号码注册 WeChat 账号（微信海外版）| GiffGaff中文手册</title>
+    <meta name="description" content="详解如何用 giffgaff 英国号码注册 WeChat 账号，了解 WeChat 与微信的区别、注册流程、风控避坑指南及 WeChat Out 网络电话功能介绍。">
+    <meta name="keywords" content="giffgaff注册WeChat,WeChat注册教程,微信海外版,WeChat与微信区别,giffgaff微信,英国号码注册微信,WeChat Out">
     <meta name="author" content="GiffGaff中文使用手册">
-    <link rel="canonical" href="https://giffgaff.us/post/11.html">
-    <link rel="icon" href="https://github.githubassets.com/favicons/favicon.svg">
-
-    <meta property="og:title" content="Giffgaff 购卡链接">
-    <meta property="og:description" content="Giffgaff 实体卡官方订购通道，全国包邮，首次充值送 5 镑。">
-    <meta property="og:locale" content="zh_CN">
-    <meta property="og:site_name" content="GiffGaff中文手册">
-    <meta property="og:type" content="article">
-    <meta property="og:url" content="https://giffgaff.us/post/11.html">
-    <meta property="og:image" content="https://statics.884885.xyz/ggimg/buy.jpg">
-
-    <style>
-        /* 全局 CSS 重置 - 抹平浏览器差异 */
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
-
-        :root { 
-            --primary-color: #f57300; 
-            --text-color: #333333; 
-            --text-muted: #666666;
-            --bg-color: #f4f5f7; 
-            --border-color: #eaeaea;
-        }
-        
-        body { 
-            /* 万能系统字体栈 */
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.7; 
-            color: var(--text-color); 
-            background-color: var(--bg-color); 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 20px; 
-            -webkit-font-smoothing: antialiased;
-        }
-        
-        .content-card { 
-            background: #ffffff; 
-            padding: 32px; 
-            border-radius: 12px; 
-            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05); 
-        }
-
-        /* 顶部导航与图标样式 */
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 16px;
-            margin-bottom: 24px;
-        }
-
-        .post-title { 
-            color: var(--text-color); 
-            margin: 0; 
-            font-size: 1.75rem;
-            font-weight: 700;
-            line-height: 1.3;
-        }
-
-        .btn-home {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 44px;
-            height: 44px;
-            border-radius: 50%;
-            color: #666;
-            text-decoration: none;
-            background-color: transparent;
-            transition: background-color 0.2s ease, color 0.2s ease;
-            flex-shrink: 0;
-        }
-
-        .btn-home:hover, .btn-home:focus {
-            background-color: #f0f0f0;
-            color: var(--primary-color);
-            outline: none;
-        }
-
-        .btn-home svg { fill: currentColor; width: 22px; height: 22px; }
-
-        /* 内容排版 */
-        h2 { 
-            color: var(--primary-color); 
-            font-size: 1.35rem;
-            margin: 32px 0 16px;
-            border-bottom: 2px solid #fff4e6;
-            padding-bottom: 8px;
-            display: flex;
-            align-items: center;
-            gap: 10px;
-            flex-wrap: wrap;
-        }
-        
-        h3 { 
-            color: var(--text-color); 
-            font-size: 1.15rem;
-            margin: 24px 0 12px;
-            font-weight: 600;
-        }
-        
-        p { margin-bottom: 16px; }
-        
-        ul { padding-left: 24px; margin-bottom: 16px; }
-        li { margin-bottom: 8px; }
-
-        a { color: var(--primary-color); text-decoration: none; word-break: break-all; }
-        a:hover { text-decoration: underline; }
-
-        /* 大图样式 */
-        .hero-img { 
-            width: 100%; 
-            height: auto; 
-            border-radius: 8px; 
-            display: block; 
-            margin: 0 0 24px 0; 
-            box-shadow: 0 2px 10px rgba(0,0,0,0.08);
-        }
-
-        /* 强调块 */
-        .important-note { 
-            background: #fff4e6; 
-            border-left: 4px solid #ff922b; 
-            padding: 20px; 
-            margin: 16px 0 24px; 
-            border-radius: 0 8px 8px 0;
-            font-size: 0.95rem;
-            color: #444;
-        }
-        .important-note p { margin-bottom: 12px; }
-        .important-note p:last-child { margin-bottom: 0; }
-
-        footer {
-            text-align: center;
-            margin-top: 40px;
-            margin-bottom: 20px;
-            font-size: 0.875rem;
-            color: #888;
-        }
-
-        @media screen and (max-width: 600px) {
-            body { padding: 12px; }
-            .content-card { padding: 20px; }
-            .post-title { font-size: 1.4rem; }
-        }
-    
-        /* ===== 全局导航栏 ===== */
-        .site-nav {
-            position: sticky;
-            top: 0;
-            z-index: 100;
-            background: #ffffff;
-            border-bottom: 1px solid #eaeaea;
-            box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-        }
-        .site-nav-inner {
-            max-width: 860px;
-            margin: 0 auto;
-            padding: 0 20px;
-            display: flex;
-            align-items: center;
-            height: 52px;
-            gap: 4px;
-        }
-        .site-nav-logo {
-            font-size: 1rem;
-            font-weight: 700;
-            color: #f57300;
-            text-decoration: none;
-            margin-right: auto;
-            white-space: normal;
-            display: flex;
-            align-items: center;
-            gap: 7px;
-        }
-        .site-nav-logo img {
-            width: 28px;
-            height: 28px;
-            border-radius: 50%;
-            transition: transform 0.5s ease;
-            display: block;
-        }
-        .site-nav-logo:hover img {
-            transform: rotate(360deg);
-        }
-        .site-nav a.nav-link {
-            display: inline-flex;
-            align-items: center;
-            gap: 4px;
-            padding: 6px 10px;
-            border-radius: 8px;
-            font-size: 0.85rem;
-            color: #555;
-            text-decoration: none;
-            white-space: normal;
-            transition: background 0.18s, color 0.18s;
-        }
-        .site-nav a.nav-link:hover,
-        .site-nav a.nav-link:focus {
-            background: #fff4e6;
-            color: #f57300;
-            outline: none;
-        }
-        .site-nav a.nav-link.buy {
-            background: #f57300;
-            color: #fff;
-            font-weight: 600;
-        }
-        .site-nav a.nav-link.buy:hover {
-            background: #d96600;
-            color: #fff;
-        }
-        @media (max-width: 400px) {
-            .nav-label { display: none; }
-            .site-nav a.nav-link { padding: 6px 8px; }
-        }
-        /* 移动端修复 */
-        .post-title, h1, h2, h3 {
-            word-break: break-word !important;
-            white-space: normal !important;
-            overflow: visible !important;
-            text-overflow: unset !important;
-        }
-        footer { padding-bottom: env(safe-area-inset-bottom, 16px); }
-        img { max-width: 100%; height: auto; display: block; }
-        @media (max-width: 480px) {
-            body { padding: 12px; }
-            .content-card { padding: 20px 16px; }
-        }
-        </style>
+    <meta name="robots" content="index, follow">
+    <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="renderer" content="webkit">
+    <link rel="canonical" href="https://giffgaff.us/post/18.html">
+    <link rel="icon" type="image/x-icon" href="https://www.giffgaff.com/favicon.ico">
+    <link rel="apple-touch-icon" href="https://www.giffgaff.com/apple-touch-icon.png">
+    <meta property="og:title" content="用 Giffgaff 号码注册 WeChat 账号（微信海外版）">
+    <meta property="og:description" content="WeChat 与微信的区别、注册流程、风控避坑全指南。">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://giffgaff.us/post/18.html">
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="GiffGaff中文手册">
+    <script type="application/ld+json">
+    {"@context":"https://schema.org","@type":"Article","headline":"用 Giffgaff 号码注册 WeChat 账号","description":"如何用 giffgaff 英国号码注册 WeChat 账号，WeChat 与微信的区别及风控避坑指南","url":"https://giffgaff.us/post/18.html","publisher":{"@type":"Organization","name":"GiffGaff中文手册","url":"https://giffgaff.us"},"breadcrumb":{"@type":"BreadcrumbList","itemListElement":[{"@type":"ListItem","position":1,"name":"首页","item":"https://giffgaff.us/"},{"@type":"ListItem","position":2,"name":"注册 WeChat 账号","item":"https://giffgaff.us/post/18.html"}]}}
+    </script>
+    <style>
+        *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; -webkit-tap-highlight-color: transparent; }
+        :root { --primary: #f57300; --text: #333; --muted: #666; --bg: #f4f5f7; --card: #fff; --border: #eaeaea; --tag-bg: #150D24; --tag-esim: #238C22; }
+        body { font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif; line-height: 1.6; color: var(--text); background: var(--bg); max-width: 800px; margin: 0 auto; padding: 20px; -webkit-font-smoothing: antialiased; }
+
+        /* ===== 全局导航栏 ===== */
+        .site-nav { position: sticky; top: 0; z-index: 100; background: #fff; border-bottom: 1px solid #eaeaea; box-shadow: 0 2px 8px rgba(0,0,0,.06); margin: -20px -20px 20px -20px; }
+        .site-nav-inner { max-width: 800px; margin: 0 auto; padding: 0 15px; display: flex; align-items: center; height: 52px; gap: 2px; }
+        .site-nav-logo { font-size: .95rem; font-weight: 700; color: #f57300; text-decoration: none; margin-right: auto; white-space: nowrap; display: flex; align-items: center; gap: 7px; }
+        .site-nav-logo img { width: 28px; height: 28px; border-radius: 50%; transition: transform .5s ease; }
+        .site-nav-logo:hover img { transform: rotate(360deg); }
+        .site-nav a.nav-link { display: inline-flex; align-items: center; gap: 4px; padding: 6px 9px; border-radius: 8px; font-size: .82rem; color: #555; text-decoration: none; white-space: nowrap; transition: background .18s, color .18s; }
+        .site-nav a.nav-link:hover { background: #fff4e6; color: #f57300; }
+        .site-nav a.nav-link.buy { background: #f57300; color: #fff; font-weight: 600; }
+        .site-nav a.nav-link.buy:hover { background: #d96600; }
+        @media (max-width: 420px) { .nav-label { display: none; } .site-nav a.nav-link { padding: 6px 7px; } }
+
+        /* ===== 文章卡片 ===== */
+        .content-card { background: var(--card); padding: 28px 32px; border-radius: 12px; box-shadow: 0 4px 12px rgba(0,0,0,.05); }
+        @media (max-width: 600px) { body { padding: 10px; } .content-card { padding: 18px 16px; } }
+
+        /* 面包屑 */
+        .breadcrumb { font-size: .78rem; color: var(--muted); margin-bottom: 16px; display: flex; align-items: center; gap: 5px; flex-wrap: wrap; }
+        .breadcrumb a { color: var(--muted); text-decoration: none; } .breadcrumb a:hover { color: var(--primary); }
+        .breadcrumb .sep { opacity: .4; }
+
+        /* 文章头部 */
+        .post-header { border-bottom: 1px solid var(--border); padding-bottom: 16px; margin-bottom: 24px; }
+        .post-title { font-size: 1.55rem; font-weight: 700; line-height: 1.3; color: var(--text); word-break: break-word; }
+        .post-tags { display: flex; gap: 6px; margin-top: 10px; flex-wrap: wrap; }
+        .tag { font-size: .65rem; color: #fff; padding: 2px 7px; border-radius: 4px; }
+        .tag-main { background: var(--tag-bg); } .tag-esim { background: var(--tag-esim); }
+
+        /* 正文 */
+        article p { margin-bottom: 14px; }
+        section { margin-top: 28px; }
+        h2 { color: var(--primary); font-size: 1.15rem; margin-bottom: 14px; display: flex; align-items: center; gap: 6px; padding-bottom: 6px; border-bottom: 1px solid var(--border); }
+        h3 { color: var(--text); font-size: 1rem; font-weight: 600; margin: 14px 0 8px; }
+        ul, ol { padding-left: 22px; margin-bottom: 14px; }
+        li { margin-bottom: 7px; line-height: 1.6; }
+        a { color: var(--primary); text-decoration: none; } a:hover { text-decoration: underline; }
+        img { max-width: 100%; border-radius: 8px; margin: 12px 0; display: block; }
+
+        /* 提示框 */
+        .note { padding: 14px 16px; border-radius: 0 8px 8px 0; margin: 18px 0; font-size: .93rem; line-height: 1.6; }
+        .note-info  { background: #e8f4fd; border-left: 4px solid #3b9ede; }
+        .note-warn  { background: #fff4e6; border-left: 4px solid #ff922b; }
+        .note-tip   { background: #ebfbee; border-left: 4px solid #51cf66; }
+
+        /* 表格 */
+        table { width: 100%; border-collapse: collapse; margin: 14px 0; font-size: .9rem; }
+        th { background: #f8f8f8; text-align: left; padding: 9px 12px; font-weight: 600; border: 1px solid var(--border); }
+        td { padding: 9px 12px; border: 1px solid var(--border); vertical-align: top; }
+        tr:nth-child(even) td { background: #fafafa; }
+
+        /* 底部导航 */
+        .post-footer { display: flex; justify-content: space-between; align-items: center; margin-top: 32px; padding-top: 18px; border-top: 1px solid var(--border); flex-wrap: wrap; gap: 10px; }
+        .btn-back { display: inline-flex; align-items: center; gap: 6px; color: var(--muted); text-decoration: none; font-size: .88rem; padding: 7px 14px; border: 1px solid var(--border); border-radius: 8px; transition: all .18s; }
+        .btn-back:hover { color: var(--primary); border-color: var(--primary); text-decoration: none; }
+        .post-copyright { font-size: .78rem; color: var(--muted); }
+        footer { text-align: center; margin-top: 24px; padding-bottom: env(safe-area-inset-bottom, 15px); font-size: .78rem; color: var(--muted); }
+    </style>
 </head>
 <body>
+
 <nav class="site-nav" aria-label="全局导航">
   <div class="site-nav-inner">
     <a href="/" class="site-nav-logo">
-      <img src="https://www.giffgaff.com/apple-touch-icon.png" alt="GiffGaff Logo" width="28" height="28">
+      <img src="https://www.giffgaff.com/apple-touch-icon.png" alt="GiffGaff" width="28" height="28">
       GiffGaff中文手册
     </a>
     <a href="/" class="nav-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V12h6v9"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V12h6v9"/></svg>
       <span class="nav-label">首页</span>
     </a>
     <a href="/tag.html" class="nav-link">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" aria-hidden="true"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
       <span class="nav-label">搜索</span>
     </a>
     <a href="https://t.me/giffgaffus" class="nav-link" target="_blank" rel="noopener noreferrer">
-      <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-2.04 9.613c-.153.678-.556.843-1.126.524l-3.113-2.294-1.503 1.446c-.166.166-.305.305-.625.305l.223-3.167 5.766-5.208c.251-.223-.054-.346-.388-.123L7.44 14.725l-3.05-.953c-.663-.207-.676-.663.138-.981l11.912-4.593c.552-.2 1.035.134.122.05z"/></svg>
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-2.04 9.613c-.153.678-.556.843-1.126.524l-3.113-2.294-1.503 1.446c-.166.166-.305.305-.625.305l.223-3.167 5.766-5.208c.251-.223-.054-.346-.388-.123L7.44 14.725l-3.05-.953c-.663-.207-.676-.663.138-.981l11.912-4.593c.552-.2 1.035.134.122.05z"/></svg>
       <span class="nav-label">Telegram</span>
     </a>
     <a href="https://shop.giffgaff.us/" class="nav-link buy" target="_blank" rel="noopener noreferrer">
-      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" aria-hidden="true"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
       <span class="nav-label">购卡</span>
     </a>
   </div>
 </nav>
 
-<main class="content-card">
-    <header>
-        <h1 class="post-title">Giffgaff 购卡链接</h1>
-        <a href="https://giffgaff.us" class="btn-home" title="返回首页" aria-label="返回首页">
-            <svg viewBox="0 0 16 16">
-                <path fill-rule="evenodd" d="M6.906.664a1.749 1.749 0 0 1 2.187 0l5.25 4.2c.415.332.657.835.657 1.367v7.019A1.75 1.75 0 0 1 13.25 15h-3.5a.75.75 0 0 1-.75-.75V9H7v5.25a.75.75 0 0 1-.75.75h-3.5A1.75 1.75 0 0 1 1 13.25V6.23c0-.531.242-1.034.657-1.366l5.25-4.2Zm1.25 1.171a.25.25 0 0 0-.312 0l-5.25 4.2a.25.25 0 0 0-.094.196v7.019c0 .138.112.25.25.25H5.5V8.25a.75.75 0 0 1 .75-.75h3.5a.75.75 0 0 1 .75.75v5.25h2.75a.25.25 0 0 0 .25-.25V6.23a.25.25 0 0 0-.094-.195Z"></path>
-            </svg>
-        </a>
-    </header>
+<main>
+  <div class="content-card">
+
+    <nav class="breadcrumb" aria-label="面包屑导航">
+      <a href="/">首页</a>
+      <span class="sep">›</span>
+      <span>用 Giffgaff 号码注册 WeChat 账号</span>
+    </nav>
+
+    <div class="post-header">
+      <h1 class="post-title">🌏 用 Giffgaff 号码注册 WeChat 账号</h1>
+      <div class="post-tags">
+        <span class="tag tag-main">giffgaff</span>
+        <span class="tag tag-esim">WeChat</span>
+      </div>
+    </div>
 
     <article>
-        <img class="hero-img" src="https://statics.884885.xyz/ggimg/buy.jpg" alt="Giffgaff 实体卡购买">
 
-        <ul>
-            <li>除西藏新疆内蒙古地区实体卡两张起订，港澳台地区不发货。</li>
-            <li>实体卡含快递费 76.8 元。</li>
-            <li>首次充值 10 英镑都有 5 英镑奖励金。</li>
-        </ul>
+      <section>
+        <h2>🔄 WeChat 与微信的区别</h2>
+        <p>WeChat 不是微信（Weixin）。它们是两套独立运营的体系，可以简单理解为<strong>微信的海外版</strong>。两者使用完全相同的软件，但账号系统不同、数据控制方不同，相互之间可以互联互通，在部分小功能上也存在差异。</p>
+        <p>更多隐私细节可参阅 <a href="https://www.wechat.com/en/privacy_policy.html" target="_blank" rel="noopener noreferrer">WeChat 官方隐私政策</a>。</p>
 
-        <h2>订购地址： <a href="https://shop.giffgaff.us/" target="_blank" rel="nofollow">http://shop.giffgaff.us</a></h2>
+        <h3>如何区分</h3>
+        <p>最简单的方法：打开软件，聊天界面顶部显示「微信」（或英文系统下显示 Weixin）的是 Weixin；显示「WeChat」的是 WeChat。</p>
+        <img src="../img/wechat-header.jpg" alt="WeChat 顶部界面与微信对比截图" width="600" height="300" loading="lazy">
+        <p>也可以点开「我」→「设置」→「关于微信」，再点击底部的《软件许可及服务协议》，显示 <strong>WeChat 服务条款</strong>的即为 WeChat，否则为 Weixin。</p>
+      </section>
 
-        <h3>注意事项：</h3>
-        <div class="important-note">
-            <p><strong>① 发货时效：</strong> 下单后最晚三日内发货，周末正常发货，节假日看仓库安排。</p>
-            <p><strong>② 激活服务：</strong> 需要代充值激活卡片的，下单后扫描包装上的二维码联系客服充值激活，代充费用请咨询客服。</p>
-            <p><strong>③ 快递物流：</strong> 全国包邮，多地随机发货，韵达/申通/极兔快递随机选择，快递单号请在订单详情里查看，可以在数卡商店查询订单进度。</p>
+      <section>
+        <h2>🌟 WeChat 的优势</h2>
+        <p>数据存储在海外，欧洲区适用更严格的隐私保护法规。服务器位于香港，数据控制方根据地区有所不同：</p>
+        <table>
+          <thead><tr><th>地区</th><th>数据控制主体</th><th>所在地</th></tr></thead>
+          <tbody>
+            <tr><td>中国大陆</td><td>深圳市腾讯计算机系统有限公司</td><td>深圳</td></tr>
+            <tr><td>欧洲经济区（EEA）、英国或瑞士</td><td>Tencent International Service Europe B.V.</td><td>荷兰</td></tr>
+            <tr><td>其他地区</td><td>WeChat International Pte. Ltd.</td><td>新加坡</td></tr>
+          </tbody>
+        </table>
+        <p>此外，WeChat 界面清爽、无广告，并去除了部分国内小功能。</p>
+
+        <h3>📞 WeChat Out（拨打国际电话）</h3>
+        <p>这是国内微信所没有的功能，支持以较低资费拨打全球范围内的移动电话和固定电话，对做外贸或经常与国际友人沟通的用户非常实用。</p>
+        <div class="note note-warn">
+          ⚠️ 目前英国号码暂不支持 WeChat Out，giffgaff 号码注册的账号无法使用该功能。可查看<a href="https://help.wechat.com/cgi-bin/micromsg-bin/oshelpcenter?opcode=2&lang=en_US&plat=ios&id=1803037&Channel=helpcenter" target="_blank" rel="noopener noreferrer">支持地区列表</a>。
         </div>
+      </section>
+
+      <section>
+        <h2>📝 注册 WeChat 流程</h2>
+        <ol>
+          <li><strong>下载微信</strong>：推荐使用 iPhone，切换至外区 Apple ID 进入 App Store 下载微信。</li>
+          <li><strong>选择区号</strong>：注册时国家/区号选择 <strong>英国 +44</strong>，之后按照页面指引操作。</li>
+          <li><strong>完成验证</strong>：注册过程中需要完成短信验证（giffgaff 号码接收），也可能需要好友辅助验证或银行卡验证。</li>
+        </ol>
+      </section>
+
+      <section>
+        <h2>⚠️ 风控避坑指南</h2>
+        <p>WeChat 的风控机制较为严格，触发后轻则限制账号、重则直接封禁。为最大限度降低风险，请注意以下几点：</p>
+        <ul>
+          <li><strong>不开代理/VPN</strong>：直接使用 Wi-Fi 或移动数据，不要挂梯子。</li>
+          <li><strong>不使用手机分身/双开</strong>功能。</li>
+          <li><strong>不使用登录过大量微信账号的手机</strong>，例如工作室用的二手机，此类设备注册后往往立即被封。</li>
+          <li><strong>登录后不要频繁换设备</strong>，使用一段时间再做调整。</li>
+          <li><strong>国内手机不要给 WeChat 账号解封</strong>，国外手机也不要给国内 Weixin 账号解封，两者系统隔离。</li>
+          <li><strong>不使用 root 或越狱的手机</strong>。</li>
+          <li><strong>不需要切换系统语言</strong>，保持中文即可。</li>
+          <li><strong>控制加好友频率</strong>：新号每周加几个好友为宜，不能完全不加，也不能批量猛加。</li>
+        </ul>
+        <div class="note note-info">
+          💡 总体原则：腾讯风控策略严格，新号尽量少操作、慢慢养号。遇到封号可参考官方指引：<a href="https://help.wechat.com/cgi-bin/micromsg-bin/oshelpcenter?opcode=2&lang=zh_CN&plat=ios&id=180323e2Enmq180323yqYrYB&Channel=helpcenter" target="_blank" rel="noopener noreferrer">WeChat 账户自助解封失败了怎么办？</a>
+        </div>
+      </section>
+
+      <section>
+        <h2>🔄 换绑手机号的注意事项</h2>
+        <p>将微信绑定的手机号从 <code>+86</code> 换为其他区号，或从其他区号换回 <code>+86</code>，账号将在 Weixin 与 WeChat 之间切换，同时触发数据迁移。</p>
+        <div class="note note-warn">
+          ⚠️ 强烈不建议随意更换绑定区号，此操作属于高风险行为，可能导致账号异常或数据丢失。
+        </div>
+      </section>
+
     </article>
+
+    <div class="post-footer">
+      <a href="/" class="btn-back">
+        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M19 12H5M12 5l-7 7 7 7"/></svg>
+        返回首页
+      </a>
+      <span class="post-copyright">本文仅供参考，以 WeChat 官方说明为准</span>
+    </div>
+
+  </div>
 </main>
 
 <footer>
-    <p>&copy; <span id="year"></span> <a href="https://giffgaff.us">GiffGaff中文使用手册</a></p>
+  <p>&copy; <span id="yr"></span> GiffGaff中文使用手册</p>
 </footer>
-
-<script>
-    // 动态生成年份
-    document.getElementById("year").textContent = new Date().getFullYear();
-</script>
-
+<script>document.getElementById("yr").textContent = new Date().getFullYear();</script>
 </body>
 </html>
