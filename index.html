@@ -5,34 +5,42 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     
-    <!-- 核心标题：包含品牌名与核心价值 -->
+    <!-- 核心标题 -->
     <title>Giffgaff中文使用手册 | 2026官方授权激活、充值、eSIM保号全指南</title>
 
-    <!-- 优化后的描述：针对 AI 摘要优化，包含核心痛点（接码、漫游、支付） -->
-    <meta name="description" content="Giffgaff中文手册提供2026最新英国手机卡在中国激活使用指南。包含：支付宝微信快速充值、实体卡一键转eSIM教程、低门槛长效保号策略及漫游资费查询。解决英国PayPal、银行卡、社交平台接码难题。咨询微信：myeSIM。">
-
-    <!-- 关键词：改用逗号隔开，涵盖高频搜索词 -->
+    <meta name="description" content="Giffgaff中文手册提供2026最新英国手机卡在中国激活使用指南。包含：支付宝微信快速充值、实体卡一键转eSIM教程、低门槛长效保号策略及漫游资费查询。解决英国PayPal、银行卡、社交平台接码难题。咨询Telegram：@giffgaffus。">
     <meta name="keywords" content="giffgaff,giffgaff充值,giffgaff激活,giffgaff中文,英国手机卡,eSIM转换,giffgaff保号,英国SIM卡中国使用,英国虚拟号接码">
-    <!-- 标准 Favicon -->
+    
+    <!-- 百度/360/搜狗专用 -->
+    <meta name="baidu-site-verification" content="">
+    <meta name="360-site-verification" content="">
+    <meta http-equiv="Cache-Control" content="no-transform">
+    <meta http-equiv="Cache-Control" content="no-siteapp">
+    <meta name="renderer" content="webkit">
+    <meta name="force-rendering" content="webkit">
+
     <link rel="icon" type="image/x-icon" href="https://www.giffgaff.com/favicon.ico">
-    
-    <!-- 针对 iOS 和安卓的高清图标 (Apple Touch Icon) -->
     <link rel="apple-touch-icon" href="https://www.giffgaff.com/apple-touch-icon.png">
-    
-    <!-- 针对 Chrome 和现代浏览器的 32x32 图标 -->
     <link rel="icon" type="image/png" sizes="32x32" href="https://www.giffgaff.com/static-resource-service/static/giffgaff/icons/favicon-32x32.png">
-    <!-- 搜索引擎指令 -->
+    
     <meta name="robots" content="index, follow">
     <meta name="revisit-after" content="1 days">
     <link rel="canonical" href="https://giffgaff.us/">
+    <link rel="alternate" type="application/rss+xml" title="GiffGaff中文手册 RSS" href="https://giffgaff.us/rss.xml">
 
-    <!-- 针对社交平台分享优化 (OG Tags) -->
+    <!-- OG / Twitter Card -->
     <meta property="og:title" content="Giffgaff中文使用手册 - 英国手机卡全攻略">
     <meta property="og:description" content="全面解决Giffgaff在华使用问题，涵盖充值、激活、eSIM及保号指南。">
     <meta property="og:url" content="https://giffgaff.us/">
     <meta property="og:type" content="website">
-    
-    <!-- 添加 JSON-LD 结构化数据：这是让 AI 工具和 Google 快速理解网页内容的关键 -->
+    <meta property="og:locale" content="zh_CN">
+    <meta property="og:site_name" content="GiffGaff中文手册">
+    <meta property="og:image" content="https://www.giffgaff.com/apple-touch-icon.png">
+    <meta name="twitter:card" content="summary">
+    <meta name="twitter:title" content="Giffgaff中文使用手册">
+    <meta name="twitter:description" content="英国Giffgaff手机卡激活、充值、eSIM、保号中文指南">
+
+    <!-- JSON-LD 结构化数据 -->
     <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -40,6 +48,7 @@
       "name": "GiffGaff中文手册",
       "url": "https://giffgaff.us/",
       "description": "英国Giffgaff手机卡激活、充值、eSIM、保号中文指南",
+      "inLanguage": "zh-CN",
       "potentialAction": {
         "@type": "SearchAction",
         "target": "https://giffgaff.us/tag.html?q={search_term_string}",
@@ -47,10 +56,8 @@
       }
     }
     </script>
- 
 
     <style>
-        /* 全局 CSS 重置 */
         *, *::before, *::after {
             box-sizing: border-box;
             margin: 0;
@@ -67,13 +74,6 @@
             --border-color: #eaeaea;
             --tag-bg: #150D24;
             --tag-esim: #238C22;
-        }
-
-        @media (prefers-color-scheme: dark) {
-            :root {
-                --text-main: #222222;
-                --text-muted: #555555;
-            }
         }
         
         body { 
@@ -102,11 +102,13 @@
             gap: 10px;
             text-decoration: none;
             color: var(--text-main);
+            min-width: 0;
         }
 
         .header-logo {
             width: 36px;
             height: 36px;
+            flex-shrink: 0;
             border-radius: 50%;
             transition: transform 0.5s ease;
         }
@@ -115,14 +117,14 @@
 
         .site-title { font-size: 1.25rem; font-weight: 700; }
 
-        .header-right { display: flex; gap: 4px; }
+        .header-right { display: flex; gap: 4px; flex-shrink: 0; }
 
         .icon-btn {
             display: inline-flex;
             align-items: center;
             justify-content: center;
-            width: 32px;
-            height: 32px;
+            width: 36px;
+            height: 36px;
             border-radius: 50%;
             color: var(--text-muted);
             text-decoration: none;
@@ -130,7 +132,7 @@
         }
 
         .icon-btn:hover { background: rgba(0,0,0,0.05); color: var(--primary-color); }
-        .icon-btn svg { fill: currentColor; width: 16px; height: 16px; }
+        .icon-btn svg { fill: currentColor; width: 18px; height: 18px; }
 
         .announcement {
             background: var(--card-bg);
@@ -154,10 +156,11 @@
             background: var(--card-bg);
             border: 1px solid var(--border-color);
             border-radius: 6px;
-            padding: 10px 16px; /* 紧凑内边距 */
+            padding: 10px 16px;
             text-decoration: none;
             color: var(--text-main);
             transition: all 0.15s ease;
+            gap: 10px;
         }
 
         .article-item:hover {
@@ -166,16 +169,17 @@
             box-shadow: 0 2px 8px rgba(0,0,0,0.05);
         }
 
+        /* 修复：移除 white-space:nowrap，允许标题换行 */
         .article-title {
-            font-size: 1.05rem; /* 文字加大 */
+            font-size: 1rem;
             font-weight: 500;
             flex: 1;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
+            min-width: 0;
+            word-break: break-word;
+            line-height: 1.4;
         }
 
-        .tags { display: flex; gap: 4px; flex-shrink: 0; margin-left: 12px; }
+        .tags { display: flex; gap: 4px; flex-shrink: 0; align-items: center; }
 
         .tag {
             font-size: 0.65rem;
@@ -191,7 +195,7 @@
         footer {
             text-align: center;
             margin-top: 30px;
-            padding-bottom: 15px;
+            padding-bottom: env(safe-area-inset-bottom, 15px);
             font-size: 0.8rem;
             color: var(--text-muted);
         }
@@ -199,7 +203,7 @@
         @media screen and (max-width: 600px) {
             body { padding: 10px; }
             .article-item { padding: 9px 12px; }
-            .article-title { font-size: 0.98rem; } /* 移动端文字大小适配 */
+            .article-title { font-size: 0.95rem; }
             .site-title { font-size: 1.1rem; }
         }
     </style>
@@ -208,15 +212,15 @@
 
     <header>
         <a href="https://giffgaff.us" class="header-left">
-            <img src="https://www.giffgaff.com/apple-touch-icon.png" alt="Logo" class="header-logo">
+            <img src="https://www.giffgaff.com/apple-touch-icon.png" alt="GiffGaff Logo" class="header-logo" width="36" height="36">
             <span class="site-title">GiffGaff中文手册</span>
         </a>
         <div class="header-right">
-            <a href="https://giffgaff.us/tag.html" class="icon-btn" title="搜索">
-                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
+            <a href="https://giffgaff.us/tag.html" class="icon-btn" title="搜索" aria-label="搜索文章">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M15.7 13.3l-3.81-3.83A5.93 5.93 0 0 0 13 6c0-3.31-2.69-6-6-6S1 2.69 1 6s2.69 6 6 6c1.3 0 2.48-.41 3.47-1.11l3.83 3.81c.19.2.45.3.7.3.25 0 .52-.09.7-.3a.996.996 0 0 0 0-1.41v.01zM7 10.7c-2.59 0-4.7-2.11-4.7-4.7 0-2.59 2.11-4.7 4.7-4.7 2.59 0 4.7 2.11 4.7 4.7 0 2.59-2.11 4.7-4.7 4.7z"></path></svg>
             </a>
-            <a href="https://giffgaff.us/rss.xml" target="_blank" class="icon-btn" title="RSS">
-                <svg viewBox="0 0 16 16"><path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"></path></svg>
+            <a href="https://giffgaff.us/rss.xml" target="_blank" rel="noopener" class="icon-btn" title="RSS订阅" aria-label="RSS订阅">
+                <svg viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M2.002 2.725a.75.75 0 0 1 .797-.699C8.79 2.42 13.58 7.21 13.974 13.201a.75.75 0 0 1-1.497.098 10.502 10.502 0 0 0-9.776-9.776.747.747 0 0 1-.7-.798ZM2.84 7.05h-.002a7.002 7.002 0 0 1 6.113 6.111.75.75 0 0 1-1.49.178 5.503 5.503 0 0 0-4.8-4.8.75.75 0 0 1 .179-1.489ZM2 13a1 1 0 1 1 2 0 1 1 0 0 1-2 0Z"></path></svg>
             </a>
         </div>
     </header>
@@ -226,59 +230,61 @@
         <p>实体卡订购：<a href="https://shop.giffgaff.us" target="_blank" rel="nofollow">https://shop.giffgaff.us</a></p>
     </div>
  
-    <main class="article-list">
-        <a href="post/12.html" class="article-item">
-            <div class="article-title">Giffgaff 英国SIM卡简介</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
-        </a>
-        <a href="post/paypal-gb.html" class="article-item">
-            <div class="article-title">手把手教你注册一个英国 PayPal 账户！并获得10英镑赠金</div>
-            <div class="tags"><span class="tag tag-main">PayPal</span><span class="tag tag-esim">英国</span></div>
-        </a> 
-        <a href="post/11.html" class="article-item">
-            <div class="article-title">Giffgaff 购卡链接</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
-        </a>
-        <a href="post/10.html" class="article-item">
-            <div class="article-title">Giffgaff 充值激活指南</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
-        </a>
-        <a href="post/9.html" class="article-item">
-            <div class="article-title">Giffgaff 修改密码</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
-        </a>
-        <a href="post/8.html" class="article-item">
-            <div class="article-title">Giffgaff 修改邮箱</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
-        </a>
-        <a href="post/7.html" class="article-item">
-            <div class="article-title">Giffgaff 常见问题</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
-        </a>
-        <a href="post/6.html" class="article-item">
-            <div class="article-title">Giffgaff 常用功能</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
-        </a>
-        <a href="post/5.html" class="article-item">
-            <div class="article-title">国内漫游资费</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
-        </a>
-        <a href="post/4.html" class="article-item">
-            <div class="article-title">注册接码问题</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
-        </a>
-        <a href="post/3.html" class="article-item">
-            <div class="article-title">保号攻略</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
-        </a>
-        <a href="post/2.html" class="article-item">
-            <div class="article-title">实体卡转eSIM指南</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
-        </a>
-        <a href="post/1.html" class="article-item">
-            <div class="article-title">giffgaff 换号操作指南</div>
-            <div class="tags"><span class="tag tag-main">giffgaff</span></div>
-        </a>
+    <main>
+        <nav class="article-list" aria-label="文章列表">
+            <a href="post/12.html" class="article-item">
+                <div class="article-title">Giffgaff 英国SIM卡简介</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
+            </a>
+            <a href="post/paypal-gb.html" class="article-item">
+                <div class="article-title">手把手教你注册一个英国 PayPal 账户！并获得10英镑赠金</div>
+                <div class="tags"><span class="tag tag-main">PayPal</span><span class="tag tag-esim">英国</span></div>
+            </a> 
+            <a href="post/11.html" class="article-item">
+                <div class="article-title">Giffgaff 购卡链接</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
+            </a>
+            <a href="post/10.html" class="article-item">
+                <div class="article-title">Giffgaff 充值激活指南</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
+            </a>
+            <a href="post/9.html" class="article-item">
+                <div class="article-title">Giffgaff 修改密码</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+            </a>
+            <a href="post/8.html" class="article-item">
+                <div class="article-title">Giffgaff 修改邮箱</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+            </a>
+            <a href="post/7.html" class="article-item">
+                <div class="article-title">Giffgaff 常见问题</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+            </a>
+            <a href="post/6.html" class="article-item">
+                <div class="article-title">Giffgaff 常用功能</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+            </a>
+            <a href="post/5.html" class="article-item">
+                <div class="article-title">国内漫游资费</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+            </a>
+            <a href="post/4.html" class="article-item">
+                <div class="article-title">注册接码问题</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+            </a>
+            <a href="post/3.html" class="article-item">
+                <div class="article-title">保号攻略</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+            </a>
+            <a href="post/2.html" class="article-item">
+                <div class="article-title">实体卡转eSIM指南</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span><span class="tag tag-esim">esim</span></div>
+            </a>
+            <a href="post/1.html" class="article-item">
+                <div class="article-title">giffgaff 换号操作指南</div>
+                <div class="tags"><span class="tag tag-main">giffgaff</span></div>
+            </a>
+        </nav>
     </main>
 
     <footer>
