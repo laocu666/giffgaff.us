@@ -4,327 +4,147 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    
     <title>搜索与标签 - GiffGaff中文手册</title>
     <meta name="description" content="通过标签或关键词搜索 Giffgaff 中文手册中的所有指南，快速查找关于激活、充值、eSIM、保号等常见问题的解决方案。">
-    <meta name="keywords" content="giffgaff搜索,giffgaff标签,giffgaff指南查找">
+    <meta name="keywords" content="giffgaff搜索,giffgaff激活,giffgaff充值,giffgaff eSIM,giffgaff保号,英国手机卡指南">
     <meta name="robots" content="index, follow">
-    <meta name="googlebot" content="index, follow">
-    <meta name="baiduspider" content="index, follow">
+    <meta name="renderer" content="webkit">
     <meta http-equiv="Cache-Control" content="no-transform">
     <meta http-equiv="Cache-Control" content="no-siteapp">
-    <meta name="renderer" content="webkit">
-    <meta name="force-rendering" content="webkit">
-    <meta name="applicable-device" content="pc,mobile">
     <link rel="canonical" href="https://giffgaff.us/tag.html">
-    <link rel="icon" href="https://www.giffgaff.com/favicon.ico">
+    <link rel="icon" type="image/x-icon" href="https://www.giffgaff.com/favicon.ico">
     <meta property="og:title" content="搜索与标签 - GiffGaff中文手册">
-    <meta property="og:url" content="https://giffgaff.us/tag.html">
     <meta property="og:type" content="website">
     <meta property="og:locale" content="zh_CN">
     <meta property="og:site_name" content="GiffGaff中文手册">
-
     <style>
-        *, *::before, *::after {
-            box-sizing: border-box;
-            margin: 0;
-            padding: 0;
-            -webkit-tap-highlight-color: transparent;
-        }
+        *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;-webkit-tap-highlight-color:transparent}
+        :root{--primary:#f57300;--text:#333;--muted:#666;--bg:#f4f5f7;--card:#fff;--border:#eaeaea;--tag-bg:#150D24;--tag-esim:#238C22}
+        body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;line-height:1.4;color:var(--text);background:var(--bg);max-width:830px;margin:0 auto;padding:15px;-webkit-font-smoothing:antialiased}
+        .search-row{display:flex;margin-bottom:15px;gap:8px}
+        .search-input{flex:1;height:40px;padding:0 14px;border:1px solid var(--border);border-radius:8px;font-size:.95rem;outline:none;background:var(--card)}
+        .search-input:focus{border-color:var(--primary)}
+        .search-btn{height:40px;padding:0 18px;background:var(--primary);color:#fff;border:none;border-radius:8px;font-size:.9rem;cursor:pointer}
+        .search-btn:hover{opacity:.9}
+        .tag-cloud{display:flex;flex-wrap:wrap;gap:8px;margin-bottom:18px;padding:12px;background:var(--card);border:1px solid var(--border);border-radius:8px}
+        .tag-pill{font-size:.75rem;padding:4px 12px;border-radius:20px;background:var(--bg);color:var(--muted);cursor:pointer;transition:all .2s;border:1px solid var(--border)}
+        .tag-pill:hover,.tag-pill.active{background:var(--primary);color:#fff;border-color:var(--primary)}
+        .tag-count{font-size:.7rem;opacity:.7;margin-left:3px}
+        .article-list{display:flex;flex-direction:column;gap:5px}
+        .article-item{display:none;justify-content:space-between;align-items:flex-start;background:var(--card);border:1px solid var(--border);border-radius:6px;padding:10px 14px;text-decoration:none;color:var(--text);transition:all .15s}
+        .article-item:hover{border-color:var(--primary);transform:translateX(3px)}
+        .article-title{font-size:.95rem;font-weight:500;word-break:break-word;line-height:1.4}
+        .article-kws{font-size:.72rem;color:var(--muted);margin-top:4px;display:flex;gap:8px;flex-wrap:wrap}
+        .article-kws span::before{content:"#";opacity:.5}
+        .article-tags{display:flex;gap:4px;flex-shrink:0;margin-left:10px}
+        .tag{font-size:.65rem;color:#fff;padding:2px 6px;border-radius:4px;white-space:nowrap}
+        .tag-main{background:var(--tag-bg)}.tag-esim{background:var(--tag-esim)}
+        .not-found{display:none;text-align:center;padding:40px;color:var(--muted)}
+        footer{text-align:center;margin-top:30px;padding-bottom:env(safe-area-inset-bottom,15px);font-size:.75rem;color:var(--muted)}
+        @media(max-width:600px){body{padding:10px}}
 
-        :root { 
-            --primary-color: #f57300; 
-            --text-main: #333333; 
-            --text-muted: #666666;
-            --bg-color: #f4f5f7; 
-            --card-bg: #ffffff;
-            --border-color: #eaeaea;
-        }
-        
-        body { 
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
-            line-height: 1.4; 
-            color: var(--text-main); 
-            background-color: var(--bg-color); 
-            max-width: 800px; 
-            margin: 0 auto; 
-            padding: 15px; 
-            -webkit-font-smoothing: antialiased;
-        }
-
-        header {
-            display: flex;
-            justify-content: space-between;
-            align-items: center;
-            padding-bottom: 12px;
-            margin-bottom: 15px;
-            border-bottom: 1px solid var(--border-color);
-        }
-
-        .header-left {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-            text-decoration: none;
-            color: var(--text-main);
-        }
-
-        .site-title { font-size: 1.2rem; font-weight: 700; }
-
-        .header-right { display: flex; gap: 4px; align-items: center; }
-
-        .icon-btn {
-            display: inline-flex;
-            align-items: center;
-            justify-content: center;
-            width: 36px;
-            height: 36px;
-            border-radius: 50%;
-            color: var(--text-muted);
-            text-decoration: none;
-            transition: all 0.2s;
-        }
-
-        .icon-btn:hover { background: rgba(0,0,0,0.05); color: var(--primary-color); }
-        .icon-btn svg { fill: currentColor; width: 18px; height: 18px; }
-
-        .search-container {
-            display: flex;
-            margin-bottom: 15px;
-            gap: 8px;
-        }
-
-        .search-input {
-            flex: 1;
-            height: 44px;
-            padding: 0 12px;
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            font-size: 0.9rem;
-            outline: none;
-            background: var(--card-bg);
-        }
-
-        .search-input:focus { border-color: var(--primary-color); }
-
-        .search-btn {
-            height: 44px;
-            padding: 0 16px;
-            background-color: var(--primary-color);
-            color: #fff;
-            border: none;
-            border-radius: 6px;
-            font-size: 0.9rem;
-            cursor: pointer;
-            transition: opacity 0.2s;
-        }
-
-        .search-btn:hover { opacity: 0.9; }
-
-        .tag-cloud {
-            display: flex;
-            flex-wrap: wrap;
-            gap: 8px;
-            margin-bottom: 20px;
-            padding: 12px;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 8px;
-        }
-
-        .tag-pill {
-            font-size: 0.75rem;
-            padding: 4px 10px;
-            border-radius: 20px;
-            background: var(--bg-color);
-            color: var(--text-muted);
-            cursor: pointer;
-            transition: all 0.2s;
-            border: 1px solid var(--border-color);
-        }
-
-        .tag-pill:hover, .tag-pill.active {
-            background: var(--primary-color);
-            color: #fff;
-            border-color: var(--primary-color);
-        }
-
-        .tag-count { font-size: 0.7rem; opacity: 0.7; margin-left: 4px; }
-
-        .article-list { display: flex; flex-direction: column; gap: 5px; }
-
-        .article-item {
-            display: none;
-            justify-content: space-between;
-            align-items: center;
-            background: var(--card-bg);
-            border: 1px solid var(--border-color);
-            border-radius: 6px;
-            padding: 10px 14px;
-            text-decoration: none;
-            color: var(--text-main);
-            transition: all 0.15s ease;
-            gap: 10px;
-        }
-
-        .article-item:hover {
-            border-color: var(--primary-color);
-            transform: translateX(3px);
-            box-shadow: 0 1px 5px rgba(0,0,0,0.05);
-        }
-
-        /* 修复：移除 white-space:nowrap，允许标题换行 */
-        .article-title {
-            font-size: 0.95rem;
-            flex: 1;
-            min-width: 0;
-            word-break: break-word;
-            line-height: 1.4;
-        }
-
-        .not-found {
-            display: none;
-            text-align: center;
-            padding: 40px;
-            color: var(--text-muted);
-            font-size: 0.95rem;
-        }
-
-        footer {
-            text-align: center;
-            margin-top: 30px;
-            padding-bottom: env(safe-area-inset-bottom, 15px);
-            font-size: 0.75rem;
-            color: var(--text-muted);
-        }
-
-        @media screen and (max-width: 600px) {
-            body { padding: 10px; }
-            .article-item { padding: 9px 12px; }
-            .article-title { font-size: 0.9rem; }
-        }
+        /* ===== 全局导航栏 ===== */
+        .site-nav{position:sticky;top:0;z-index:100;background:#fff;border-bottom:1px solid #eaeaea;box-shadow:0 2px 8px rgba(0,0,0,.06);margin:-15px -15px 15px -15px}
+        .site-nav-inner{max-width:830px;margin:0 auto;padding:0 15px;display:flex;align-items:center;height:52px;gap:2px}
+        .site-nav-logo{font-size:.95rem;font-weight:700;color:#f57300;text-decoration:none;margin-right:auto;white-space:nowrap;display:flex;align-items:center;gap:7px}
+        .site-nav-logo img{width:28px;height:28px;border-radius:50%;transition:transform .5s ease}
+        .site-nav-logo:hover img{transform:rotate(360deg)}
+        .site-nav a.nav-link{display:inline-flex;align-items:center;gap:4px;padding:6px 9px;border-radius:8px;font-size:.82rem;color:#555;text-decoration:none;white-space:nowrap;transition:background .18s,color .18s}
+        .site-nav a.nav-link:hover{background:#fff4e6;color:#f57300}
+        .site-nav a.nav-link.buy{background:#f57300;color:#fff;font-weight:600}
+        .site-nav a.nav-link.buy:hover{background:#d96600}
+        @media(max-width:420px){.nav-label{display:none}.site-nav a.nav-link{padding:6px 7px}}
     </style>
 </head>
 <body>
+<nav class="site-nav" aria-label="全局导航">
+  <div class="site-nav-inner">
+    <a href="/" class="site-nav-logo">
+      <img src="https://www.giffgaff.com/apple-touch-icon.png" alt="GiffGaff" width="28" height="28">
+      GiffGaff中文手册
+    </a>
+    <a href="/" class="nav-link">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 9.5L12 3l9 6.5V20a1 1 0 0 1-1 1H4a1 1 0 0 1-1-1z"/><path d="M9 21V12h6v9"/></svg>
+      <span class="nav-label">首页</span>
+    </a>
+    <a href="/tag.html" class="nav-link">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="M21 21l-4.35-4.35"/></svg>
+      <span class="nav-label">搜索</span>
+    </a>
+    <a href="https://t.me/giffgaffus" class="nav-link" target="_blank" rel="noopener noreferrer">
+      <svg width="15" height="15" viewBox="0 0 24 24" fill="currentColor"><path d="M12 0C5.373 0 0 5.373 0 12s5.373 12 12 12 12-5.373 12-12S18.627 0 12 0zm5.562 8.248-2.04 9.613c-.153.678-.556.843-1.126.524l-3.113-2.294-1.503 1.446c-.166.166-.305.305-.625.305l.223-3.167 5.766-5.208c.251-.223-.054-.346-.388-.123L7.44 14.725l-3.05-.953c-.663-.207-.676-.663.138-.981l11.912-4.593c.552-.2 1.035.134.122.05z"/></svg>
+      <span class="nav-label">Telegram</span>
+    </a>
+    <a href="https://shop.giffgaff.us/" class="nav-link buy" target="_blank" rel="noopener noreferrer">
+      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2"><path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" y1="6" x2="21" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+      <span class="nav-label">购卡</span>
+    </a>
+  </div>
+</nav>
 
-    <header>
-        <a href="https://giffgaff.us" class="header-left">
-            <span class="site-title">GiffGaff中文手册</span>
-        </a>
-        <div class="header-right">
-            <a href="https://giffgaff.us" class="icon-btn" title="返回首页" aria-label="返回首页">
-                <svg viewBox="0 0 16 16" aria-hidden="true"><path fill-rule="evenodd" d="M8.22 2.97a.75.75 0 010 1.06L5.56 6.69h6.69a.75.75 0 010 1.5H5.56l2.66 2.66a.75.75 0 01-1.06 1.06l-3.94-3.94a.75.75 0 010-1.06l3.94-3.94a.75.75 0 011.06 0z"></path></svg>
-            </a>
-        </div>
-    </header>
-
-    <div class="search-container">
-        <input type="search" class="search-input" id="searchInput" placeholder="搜索指南标题..." aria-label="搜索文章">
-        <button class="search-btn" onclick="executeSearch()">搜索</button>
+    <div class="search-row">
+        <input type="search" class="search-input" id="searchInput" placeholder="搜索标题或关键词..." aria-label="搜索">
+        <button class="search-btn" onclick="doSearch()">搜索</button>
     </div>
-
     <div class="tag-cloud" id="tagCloud">
-        <span class="tag-pill active" onclick="filterByTag('All', this)">全部</span>
+        <span class="tag-pill active" onclick="filterTag('All',this)">全部</span>
     </div>
-
     <main class="article-list" id="articleList"></main>
-
-    <div class="not-found" id="notFound" role="status">未找到相关内容</div>
-
-    <footer>
-        <p>&copy; <span id="year"></span> GiffGaff中文使用手册</p>
-    </footer>
+    <div class="not-found" id="notFound">未找到相关内容</div>
+    <footer><p>&copy; <span id="yr"></span> GiffGaff中文使用手册</p></footer>
 
     <script>
-        document.getElementById("year").textContent = new Date().getFullYear();
-
-        let postData = [];
-        const articleList = document.getElementById('articleList');
-        const tagCloud = document.getElementById('tagCloud');
-        const notFound = document.getElementById('notFound');
-        const searchInput = document.getElementById('searchInput');
-
-        fetch('postList.json')
-            .then(res => res.json())
-            .then(data => {
-                postData = Object.keys(data)
-                    .filter(key => key !== 'labelColorDict')
-                    .map(key => data[key]);
-                renderTags(data.labelColorDict, data);
-                renderArticles();
-                checkHash();
-            });
-
-        function renderTags(colorDict, fullData) {
-            const counts = {};
-            postData.forEach(post => {
-                post.labels.forEach(l => counts[l] = (counts[l] || 0) + 1);
-            });
-            Object.keys(counts).sort((a,b) => counts[b] - counts[a]).forEach(tag => {
-                const span = document.createElement('span');
-                span.className = 'tag-pill';
-                span.innerHTML = `${tag} <span class="tag-count">${counts[tag]}</span>`;
-                span.onclick = () => filterByTag(tag, span);
-                tagCloud.appendChild(span);
-            });
-        }
-
-        function renderArticles() {
-            postData.forEach(post => {
-                const a = document.createElement('a');
-                a.href = post.postUrl;
-                a.className = 'article-item';
-                a.dataset.title = post.postTitle.toUpperCase();
-                a.dataset.labels = post.labels.join('|');
-                a.innerHTML = `<div class="article-title">${post.postTitle}</div>`;
-                articleList.appendChild(a);
-            });
-            filterByTag('All');
-        }
-
-        function filterByTag(tag, element) {
-            if (element) {
-                document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
-                element.classList.add('active');
-            }
-            let visibleCount = 0;
-            document.querySelectorAll('.article-item').forEach(item => {
-                const show = tag === 'All' || item.dataset.labels.split('|').includes(tag);
-                item.style.display = show ? 'flex' : 'none';
-                if (show) visibleCount++;
-            });
-            notFound.style.display = visibleCount === 0 ? 'block' : 'none';
-            if (tag !== 'All') window.location.hash = tag;
-        }
-
-        function executeSearch() {
-            const term = searchInput.value.toUpperCase();
-            if (!term) { filterByTag('All'); return; }
-            document.querySelectorAll('.tag-pill').forEach(p => p.classList.remove('active'));
-            let visibleCount = 0;
-            document.querySelectorAll('.article-item').forEach(item => {
-                const show = item.dataset.title.includes(term);
-                item.style.display = show ? 'flex' : 'none';
-                if (show) visibleCount++;
-            });
-            notFound.style.display = visibleCount === 0 ? 'block' : 'none';
-            window.location.hash = term;
-        }
-
-        function checkHash() {
-            const hash = decodeURIComponent(window.location.hash.slice(1));
-            if (hash) {
-                const targetTag = Array.from(document.querySelectorAll('.tag-pill')).find(t => t.textContent.includes(hash));
-                if (targetTag) {
-                    filterByTag(hash, targetTag);
-                } else {
-                    searchInput.value = hash;
-                    executeSearch();
-                }
-            }
-        }
-
-        searchInput.addEventListener('keypress', e => { if (e.key === 'Enter') executeSearch(); });
+    document.getElementById("yr").textContent=new Date().getFullYear();
+    const TC={giffgaff:"tag-main",esim:"tag-esim",PayPal:"tag-main","英国":"tag-esim"};
+    const posts=[
+  {url:"post/12.html",title:"Giffgaff \u82f1\u56fdSIM\u5361\u7b80\u4ecb",tags:["giffgaff", "esim"],keywords:["\u82f1\u56fdSIM\u5361\u8d2d\u4e70", "giffgaff\u662f\u4ec0\u4e48", "\u82f1\u56fd\u624b\u673a\u5361\u4e2d\u56fd\u4f7f\u7528"]},
+  {url:"post/paypal-gb.html",title:"\u624b\u628a\u624b\u6559\u4f60\u6ce8\u518c\u4e00\u4e2a\u82f1\u56fd PayPal \u8d26\u6237\uff01\u5e76\u83b7\u5f9710\u82f1\u9551\u8d60\u91d1",tags:["PayPal", "\u82f1\u56fd"],keywords:["\u82f1\u56fdPayPal\u6ce8\u518c", "PayPal\u82f1\u9551\u8d26\u6237\u5f00\u901a", "\u82f1\u56fdPayPal10\u82f1\u9551\u5956\u52b1"]},
+  {url:"post/11.html",title:"Giffgaff \u8d2d\u5361\u94fe\u63a5",tags:["giffgaff", "esim"],keywords:["giffgaff\u8d2d\u5361", "\u82f1\u56fdSIM\u5361\u8d2d\u4e70\u94fe\u63a5", "giffgaff\u5b98\u7f51\u8ba2\u8d2d"]},
+  {url:"post/10.html",title:"Giffgaff \u5145\u503c\u6fc0\u6d3b\uff08\u7a7a\u767d\u5361\u7528\u6237\u5fc5\u770b\uff09",tags:["giffgaff", "esim"],keywords:["giffgaff\u5145\u503c", "giffgaff\u6fc0\u6d3b\u6559\u7a0b", "giffgaff\u7a7a\u767d\u5361\u6fc0\u6d3b"]},
+  {url:"post/9.html",title:"Giffgaff \u4fee\u6539\u5bc6\u7801\uff08\u9884\u4ed8\u5361\u7528\u6237\u5fc5\u770b\uff09",tags:["giffgaff"],keywords:["giffgaff\u4fee\u6539\u5bc6\u7801", "giffgaff\u5bc6\u7801\u627e\u56de", "giffgaff\u8d26\u6237\u5b89\u5168"]},
+  {url:"post/8.html",title:"Giffgaff \u4fee\u6539\u90ae\u7bb1\uff08\u65b0\u4eba\u5fc5\u770b\uff09",tags:["giffgaff"],keywords:["giffgaff\u4fee\u6539\u90ae\u7bb1", "giffgaff\u90ae\u7bb1\u7ed1\u5b9a", "giffgaff\u8d26\u6237\u8bbe\u7f6e"]},
+  {url:"post/7.html",title:"Giffgaff \u5e38\u89c1\u95ee\u9898\uff08\u65b0\u4eba\u5fc5\u770b\uff09",tags:["giffgaff"],keywords:["giffgaff\u5e38\u89c1\u95ee\u9898", "giffgaff\u4f7f\u7528\u6559\u7a0b", "giffgaff\u65b0\u624b\u6307\u5357"]},
+  {url:"post/6.html",title:"Giffgaff \u5e38\u7528\u529f\u80fd\uff08\u65b0\u4eba\u5fc5\u770b\uff09",tags:["giffgaff"],keywords:["giffgaff\u529f\u80fd\u4ecb\u7ecd", "giffgaff\u53d1\u77ed\u4fe1\u6253\u7535\u8bdd", "giffgaff\u5957\u9910\u67e5\u8be2"]},
+  {url:"post/5.html",title:"\u56fd\u5185\u6f2b\u6e38\u8d44\u8d39",tags:["giffgaff"],keywords:["giffgaff\u4e2d\u56fd\u6f2b\u6e38", "giffgaff\u6f2b\u6e38\u8d39\u7528", "\u82f1\u56fd\u624b\u673a\u5361\u56fd\u5185\u6f2b\u6e38\u8d44\u8d39"]},
+  {url:"post/4.html",title:"\u6ce8\u518c\u63a5\u7801\u95ee\u9898",tags:["giffgaff"],keywords:["giffgaff\u63a5\u7801", "\u82f1\u56fd\u624b\u673a\u53f7\u63a5\u6536\u9a8c\u8bc1\u7801", "giffgaff\u6ce8\u518c\u5e73\u53f0\u9a8c\u8bc1"]},
+  {url:"post/3.html",title:"\u4fdd\u53f7\u653b\u7565",tags:["giffgaff"],keywords:["giffgaff\u4fdd\u53f7", "giffgaff\u53f7\u7801\u4fdd\u7559", "\u82f1\u56fd\u624b\u673a\u5361\u957f\u671f\u4fdd\u53f7\u65b9\u6cd5"]},
+  {url:"post/2.html",title:"\u5b9e\u4f53\u5361\u8f6ceSIM\u6307\u5357",tags:["giffgaff", "esim"],keywords:["giffgaff\u8f6ceSIM", "giffgaff\u5b9e\u4f53\u5361\u6362eSIM", "\u82f1\u56fdSIM\u5361eSIM\u6559\u7a0b"]},
+  {url:"post/1.html",title:"giffgaff \u6362\u53f7\u64cd\u4f5c\u6307\u5357",tags:["giffgaff"],keywords:["giffgaff\u6362\u53f7", "giffgaff\u66f4\u6362\u53f7\u7801", "giffgaff\u907f\u5f00\u6570\u5b574\u6362\u53f7"]},
+  {url:"post/18.html",title:"Giffgaff eSIM\u6fc0\u6d3b\u6559\u7a0b",tags:["giffgaff", "esim"],keywords:["giffgaff eSIM\u6fc0\u6d3b", "giffgaff\u7535\u5b50SIM\u5361", "giffgaff eSIM\u4e2d\u56fd\u4f7f\u7528"]},
+  {url:"post/paypal-uk.html",title:"\u82f1\u56fdPayPal\u4f7f\u7528\u6307\u5357",tags:["PayPal", "\u82f1\u56fd"],keywords:["\u82f1\u56fdPayPal\u4f7f\u7528", "PayPal\u82f1\u56fd\u8d26\u6237\u5145\u503c", "\u82f1\u56fdPayPal\u7ed1\u5b9a\u94f6\u884c\u5361"]}
+];
+    let curTag='All',curQ='';
+    const counts={};
+    posts.forEach(p=>p.tags.forEach(t=>counts[t]=(counts[t]||0)+1));
+    const tc=document.getElementById('tagCloud');
+    Object.keys(counts).sort((a,b)=>counts[b]-counts[a]).forEach(tag=>{
+        const s=document.createElement('span');s.className='tag-pill';
+        s.innerHTML=`${tag}<span class="tag-count">${counts[tag]}</span>`;
+        s.onclick=()=>filterTag(tag,s);tc.appendChild(s);
+    });
+    const list=document.getElementById('articleList');
+    posts.forEach((p,i)=>{
+        const a=document.createElement('a');a.href=p.url;a.className='article-item';
+        const th=p.tags.map(t=>`<span class="tag ${TC[t]||'tag-main'}">${t}</span>`).join('');
+        const kh=p.keywords.map(k=>`<span>${k}</span>`).join('');
+        a.innerHTML=`<div><div class="article-title">${p.title}</div><div class="article-kws">${kh}</div></div><div class="article-tags">${th}</div>`;
+        list.appendChild(a);
+    });
+    function render(){
+        let n=0;
+        document.querySelectorAll('.article-item').forEach((el,i)=>{
+            const p=posts[i],q=curQ.toLowerCase();
+            const ok=(curTag==='All'||p.tags.includes(curTag))&&(!q||p.title.toLowerCase().includes(q)||p.keywords.some(k=>k.toLowerCase().includes(q)));
+            el.style.display=ok?'flex':'none';if(ok)n++;
+        });
+        document.getElementById('notFound').style.display=n?'none':'block';
+    }
+    function filterTag(tag,el){curTag=tag;document.querySelectorAll('.tag-pill').forEach(s=>s.classList.remove('active'));el.classList.add('active');render();}
+    function doSearch(){curQ=document.getElementById('searchInput').value;render();}
+    document.getElementById('searchInput').addEventListener('keydown',e=>{if(e.key==='Enter')doSearch();});
+    const urlQ=new URLSearchParams(location.search).get('q');
+    if(urlQ){document.getElementById('searchInput').value=urlQ;curQ=urlQ;}
+    render();
     </script>
 </body>
 </html>
